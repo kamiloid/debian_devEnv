@@ -1,0 +1,21 @@
+Download and Install OhMyBash:
+https://ohmybash.nntoan.com/
+Change theme in variable OSH_THEME='[theme_name]'
+Themes: https://github.com/ohmybash/oh-my-bash/wiki/Themes
+
+
+Bashrc Aliases:
+alias cl="clear && neofetch"
+alias miel="tmux new-session -n"
+alias lgit="lazygit"
+alias sys="htop"
+alias sys2="vtop"
+alias disk="ncdu --color=dark"
+alias xampp_start="sudo /opt/lampp/lampp start"
+alias xampp_stop="sudo /opt/lampp/lampp stop"
+alias xampp_restart="sudo /opt/lampp/lampp restart"
+alias mysql_client="~/.local/bin/mycli -d conn"
+
+Initial commands
+cl
+miel s1

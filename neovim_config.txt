@@ -1,0 +1,12 @@
+Vim-Plug page:
+https://github.com/junegunn/vim-plug
+- install:
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+- note: remember open access to ~/.local/share/nvim and ~/.config/nvim
+
+Chris Machine - LSP sonfig reference:
+https://www.chrisatmachine.com/blog/category/neovim/27-native-lsp
+
+LSP servers list:
+https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md

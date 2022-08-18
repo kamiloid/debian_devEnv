@@ -1,0 +1,5 @@
+Tmux Plugin packer:
+https://github.com/tmux-plugins/tpm
+
+Tmux theme pack collection:
+https://github.com/jimeh/tmux-themepack
