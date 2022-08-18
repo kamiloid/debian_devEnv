@@ -12,8 +12,16 @@ https://github.com/nodesource/distributions/blob/master/README.md#debinstall
 Neofetch install reference:
 https://www.linuxcapable.com/install-neofetch-on-debian-11-bullseye/
 
+Bashtop install reference
+git clone https://github.com/aristocratos/bashtop.git
+cd bashtop
+sudo make install
+
 Htop install reference:
 https://installati.one/debian/11/htop/
+
+Vtop install reference:
+sudo npm i -g vtop
 
 Python3.10 install reference:
 https://cloudcone.com/docs/article/how-to-install-python-3-10-on-debian-11/
