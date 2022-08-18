@@ -1,3 +1,11 @@
+Install xclip [Copy and Paste in tmux]
+sudo apt install xclip
+
+Install NeoVim correctly:
+Download nvim-linux64.deb from releases: https://github.com/neovim/neovim/releases/tag/v0.7.2
+Install the package using sudo apt install ./nvim-linux64.deb
+Run nvim
+
 Nodejs install reference:
 https://github.com/nodesource/distributions/blob/master/README.md#debinstall
 
@@ -10,8 +18,16 @@ https://installati.one/debian/11/htop/
 Python3.10 install reference:
 https://cloudcone.com/docs/article/how-to-install-python-3-10-on-debian-11/
 
+Pip3 install reference:
+https://www.educative.io/answers/installing-pip3-in-ubuntu
+https://stackoverflow.com/questions/6587507/how-to-install-pip-with-python-3
+
 Lazygit install reference:
-https://computingforgeeks.com/how-to-install-and-use-lazygit-a-simple-terminal-ui-for-git-commands/
+remember download Linux_x86_64.tar.gz
+Download from releases: https://github.com/jesseduffield/lazygit/releases/tag/v0.35
+Install process: 
+Extract the .tar.gz and extract the .tar file that's inside it
+copy over lazygit to /usr/bin sudo cp lazygit /usr/bin/
 
 Ranger install reference:
 https://installati.one/debian/11/ranger/
@@ -25,3 +41,10 @@ https://installati.one/debian/10/vifm/
 
 NCDU install reference:
 https://installati.one/debian/11/ncdu/
+
+MyCLI
+https://www.mycli.net/
+config:
+https://www.mycli.net/config
+setup mysql connection:
+https://www.mycli.net/loginpath

@@ -3,3 +3,10 @@ https://github.com/tmux-plugins/tpm
 
 Tmux theme pack collection:
 https://github.com/jimeh/tmux-themepack
+
+XClip setup in tmux.conf:
+bind C-c run "tmux save-buffer - | xclip -i -sel clipboard"
+bind C-v run "tmux set-buffer "$(xclip -o -sel clipboard)"; tmux paste-buffer"
+REF:
+https://linuxhint.com/copy-paste-clipboard-tmux/
+In Neovim you can copy and paste with y key and paste with p key between tmux/nvim sessions

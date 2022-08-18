@@ -7,18 +7,50 @@ set shiftwidth=4
 set noexpandtab
 set cursorline
 set cursorcolumn
-
-"IMPORT VIM FILES
-source $HOME/.config/nvim/plugs/plugins.vim
-source $HOME/.config/nvim/plugs/packer-plugs.vim
+set clipboard=unnamedplus
+set completeopt=noinsert,menuone,noselect
+set wildmenu
+set title
+set ttimeoutlen=0
+set splitbelow splitright
+set t_Co=256
+filetype plugin indent on
+syntax on
 
 set encoding=UTF-8
+
+"ITALIC FONTS/////////////////////////
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
+":EXPLORER SETTINGS//////////////////
+let g:netrw_banner=1
+let g:netrw_liststyle=3
+let g:netrw_browse_split=4
+let g:netrw_altv=1
+let g:netrw_winsize=25
+let g:netrw_keepdir=0
+let g:netrw_localcopydircmd='cp -r'
+
+"IMPORT VIM FILES///////////////////////
+source $HOME/.config/nvim/plugs/plugins.vim
+source $HOME/.config/nvim/plugs/packer-plugs.vim
 
 "COLORS & COLORSCHEME//////////////////
 colorscheme gruvbox
 set background=dark
-set termguicolors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" True color if available
+let term_program=$TERM_PROGRAM
+" Check for conflicts with Apple Terminal app
+if term_program !=? 'Apple_Terminal'
+    set termguicolors
+else
+    if $TERM !=? 'xterm-256color'
+        set termguicolors
+    endif
+endif
 
 "COMMANDS///////////////////////////////
 command! EXP :Explorer
@@ -98,3 +130,8 @@ vmap <C-f> <ESC>:Files<CR>
 imap <C-b> <ESC>:NERDTreeToggle<CR>
 nmap <C-b> <ESC>:NERDTreeToggle<CR>
 vmap <C-b> <ESC>:NERDTreeToggle<CR>
+
+
+"--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
+"REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
