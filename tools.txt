@@ -56,3 +56,10 @@ config:
 https://www.mycli.net/config
 setup mysql connection:
 https://www.mycli.net/loginpath
+
+Valentina Studio for Visual MySQL Client:
+Download current version from website https://valentina-db.com/en/all-downloads/vstudio/current
+Debian version
+- type: sudo apt install [vstudio file] where downloaded file is located
+- Add in .bashrc the following alias: alias valentina="/opt/VStudio/vstudio", save and sourced it
+- type: valentina to run Valentina Studio
