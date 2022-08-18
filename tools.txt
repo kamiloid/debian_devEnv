@@ -18,6 +18,7 @@ https://installati.one/debian/11/ranger/
 
 XAMPP install reference:
 https://orcacore.com/install-configure-xampp-debian-11/
+https://www.apachefriends.org/
 
 VIFM install reference:
 https://installati.one/debian/10/vifm/
