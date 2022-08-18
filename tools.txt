@@ -63,3 +63,8 @@ Debian version
 - type: sudo apt install [vstudio file] where downloaded file is located
 - Add in .bashrc the following alias: alias valentina="/opt/VStudio/vstudio", save and sourced it
 - type: valentina to run Valentina Studio
+
+Beekeeper for Visual MySQL Client: (recommended better than Valentina Studio)
+Download release Debian (amd64.deb) version from its github https://github.com/beekeeper-studio/beekeeper-studio/releases
+- type: sudo apt install [beekeeper file version] where downloaded file is located
+- type: beekeeper-studio to run the editor
