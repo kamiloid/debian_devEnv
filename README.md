@@ -39,7 +39,56 @@ When you clone the project, I prefer start install all in this order:
 > Note: I prefer Beekeeper than Valentina Studio
 
 #
+## HoMyBash setup instructions
+Access to [https://ohmybash.nntoan.com/](https://ohmybash.nntoan.com/) or follow the instructions:
+* Install curl:
 
+    $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+or
+* Install wget:
+
+    $ bash -c "$(wget https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh -O -)"
+This line download and install OhMyBash automatically.
+To deploy any theme, edit `.bashrc` and edit this line `OSH_THEME="[theme name]"`. You can view and choose one of these [themes](https://github.com/ohmybash/oh-my-bash/wiki/Themes).
+#
+
+## TMux setup instructions
+* Debian install, type: `sudo apt install tmux`
+* Archlinux install, type: `sudo pacman -S tmux`
+After install, type this to run it: `tmux new-session -n [session_name]`, in `[session_name]` put a preferred name.
+Check this [link](https://github.com/tmux/tmux/wiki/Installing) to check setup in different Linux distros.
+To start with Tmux, follow the [getting started.](https://github.com/tmux/tmux/wiki/Getting-Started)
+Follow this [keybindings](http://man.openbsd.org/OpenBSD-current/man1/tmux.1#DEFAULT_KEY_BINDINGS) to use the tool.
+
+To config Tmux, check in your user directory if it exists `.tmuc.conf`, but if this file not exists, you can create it with that name and edit it and paste this code:
+
+    bind C-c run "tmux save-buffer - | xclip -i -sel clipboard"
+    bind C-v run "tmux set-buffer "$(xclip -o -sel clipboard)"; tmux paste-buffer"
+    
+    set -g default-terminal "tmux-256color"
+    set -ga terminal-overrides ",xterm-256color:Tc"
+    set-option -g default-terminal "screen-256color"
+    set -ga terminal-overrides ",*256col*:Tc"
+    set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
+    set-environment -g COLORTERM "truecolor"
+    
+    # List of plugins
+    set -g @plugin 'tmux-plugins/tpm'
+    set -g @plugin 'tmux-plugins/tmux-sensible'
+    set -g @plugin 'jimeh/tmux-themepack'
+    
+    #Theme
+    set -g @themepack 'powerline/default/red'
+    
+    # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+    run '~/.tmux/plugins/tpm/tpm'
+
+To install a plugins package, follow this [link](https://github.com/tmux-plugins/tpm) or type: `https://github.com/tmux-plugins/tpm`.
+By default, in this configuration, the selected theme is `Powerline/default/red`. by the other hand, if you want to change the theme, you can edit the line `set -g @themepack '[theme_name]'`, where theme_name is referenced by [list of themes](https://github.com/jimeh/tmux-themepack).
+Save it and reset the session pressing this key sequence: `Ctrl+b+I` or restart the session.
+#
+
+#
 > This doc will continue with detailed instructions.
 > Until now, read the .txt files
 
