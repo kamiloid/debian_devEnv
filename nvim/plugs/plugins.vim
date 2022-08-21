@@ -5,6 +5,8 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
 
 "--DEPS
 Plug 'voldikss/vim-floaterm'
@@ -38,3 +40,4 @@ source $HOME/.config/nvim/plugs/lualine_conf.vim
 source $HOME/.config/nvim/plugs/barbar_conf.vim
 source $HOME/.config/nvim/plugs/wilder_conf.vim
 source $HOME/.config/nvim/plugs/lsp_config.vim
+source $HOME/.config/nvim/plugs/LSPInstaller_conf.vim

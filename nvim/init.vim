@@ -26,8 +26,8 @@ let &t_ZR="\e[23m"
 ":EXPLORER SETTINGS//////////////////
 let g:netrw_banner=1
 let g:netrw_liststyle=3
-let g:netrw_browse_split=4
-let g:netrw_altv=1
+let g:netrw_browse_split=0
+let g:netrw_altv=0
 let g:netrw_winsize=25
 let g:netrw_keepdir=0
 let g:netrw_localcopydircmd='cp -r'
@@ -37,7 +37,6 @@ source $HOME/.config/nvim/plugs/plugins.vim
 source $HOME/.config/nvim/plugs/packer-plugs.vim
 
 "COLORS & COLORSCHEME//////////////////
-
 "colorscheme challenger_depp
 "colorscheme ayu
 "colorscheme chocolate
@@ -158,6 +157,10 @@ vmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 imap <C-q> <ESC>:q!<CR>
 nmap <C-q> <ESC>:q!<CR>
 vmap <C-q> <ESC>:q!<CR>
+"--CLOSE BUFFERS UNTIL EXPLORER//////////////////
+imap <A-q> <ESC>:lua Kclose_buffers()<CR>
+nmap <A-q> <ESC>:lua Kclose_buffers()<CR>
+vmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 "--TAB EXPLORER////////////
 imap <A-b> <ESC>:Explore<CR>
 nmap <A-b> <ESC>:Explore<CR>
@@ -175,9 +178,9 @@ imap <A-LEFT> <ESC>:tabprevious<CR>
 nmap <A-LEFT> <ESC>:tabprevious<CR>
 vmap <A-LEFT> <ESC>:tabprevious<CR>
 "--CLOSE TAB
-imap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
-nmap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
-vmap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
+"imap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
+"nmap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
+"vmap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
 "--REMOVE PANEL
 imap <A-c> <ESC>:close<CR>
 nmap <A-c> <ESC>:close<CR>
@@ -220,3 +223,32 @@ vmap <C-b> <ESC>:NERDTreeToggle<CR>
 "--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
 "REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+
+lua << EOF
+
+function Kbuffer_length()
+	local count = 0
+	local buffers = vim.fn.bufnr('$')
+	for b = 1, buffers do
+		count = count + vim.fn.buflisted(b)
+	end
+	return count;
+end
+
+function Kclose_buffers()
+	local current_buffer = vim.api.nvim_get_current_buf()
+	local name = vim.api.nvim_buf_get_name(current_buffer)
+	local count = Kbuffer_length()
+	if count > 1 then
+		vim.api.nvim_buf_delete(current_buffer, { force })
+		return
+	end
+	if name ~= '' then
+		vim.api.nvim_buf_delete(0, { force })
+		vim.cmd(":Startify")
+		--vim.cmd(":Explore")
+	end
+end
+
+EOF

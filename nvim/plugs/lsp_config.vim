@@ -105,10 +105,13 @@ require'lspconfig'.html.setup{}
 require'lspconfig'.eslint.setup{}
 require'lspconfig'.jsonls.setup{}
 require'lspconfig'.sqlls.setup{}
---require'lspconfig'.phan.setup{}
 require'lspconfig'.vimls.setup{}
 
 
 EOF
 
 autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
+
+let g:LanguageClient_serverCommands = {
+    \ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
+    \ }
