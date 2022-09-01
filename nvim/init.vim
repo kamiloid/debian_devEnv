@@ -1,5 +1,5 @@
 "EDITOR PROPS////////////////////////////
-set relativenumber number
+set number
 set autoindent
 set tabstop=4
 set softtabstop=4
@@ -36,9 +36,11 @@ let g:netrw_localcopydircmd='cp -r'
 source $HOME/.config/nvim/plugs/plugins.vim
 source $HOME/.config/nvim/plugs/packer-plugs.vim
 
+let NERDTreeWinPos=1
+
 "COLORS & COLORSCHEME//////////////////
 "colorscheme challenger_depp
-"colorscheme ayu
+colorscheme ayu
 "colorscheme chocolate
 "colorscheme chocolate-contrast
 "colorscheme codecourse
@@ -47,7 +49,7 @@ source $HOME/.config/nvim/plugs/packer-plugs.vim
 "colorscheme coffee-contrast
 "colorscheme comrade-contrast
 "colorscheme crackpot-contrast
-colorscheme crisp
+"colorscheme crisp
 "colorscheme gruvbox
 "colorscheme dare-contrast
 "colorscheme darkside
@@ -143,6 +145,8 @@ command! CB :Clap buffers
 command! CF :Clap files
 command! CC :Clap colors
 command! CY :Clap yanks
+command! FB :Telescope file_browser
+command! CM :CommentToggle
 
 "KEY-BINDING////////////////////////////
 "--SAVE FILE///////////////
@@ -162,9 +166,9 @@ imap <A-q> <ESC>:lua Kclose_buffers()<CR>
 nmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 vmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 "--TAB EXPLORER////////////
-imap <A-b> <ESC>:Explore<CR>
-nmap <A-b> <ESC>:Explore<CR>
-vmap <A-b> <ESC>:Explore<CR>
+imap <A-f> <ESC>:Telescope file_browser<CR>
+nmap <A-f> <ESC>:Telescope file_browser<CR>
+vmap <A-f> <ESC>:Telescope file_browser<CR>
 "--NEW TAB
 imap <A-t> <ESC>:tabnew<CR>:Explore<CR>
 nmap <A-t> <ESC>:tabnew<CR>:Explore<CR>
@@ -177,10 +181,6 @@ vmap <A-RIGHT> <ESC>:tabnext<CR>
 imap <A-LEFT> <ESC>:tabprevious<CR>
 nmap <A-LEFT> <ESC>:tabprevious<CR>
 vmap <A-LEFT> <ESC>:tabprevious<CR>
-"--CLOSE TAB
-"imap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
-"nmap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
-"vmap <A-q> <ESC>:NERDTreeClose<CR>:bdelete<CR>
 "--REMOVE PANEL
 imap <A-c> <ESC>:close<CR>
 nmap <A-c> <ESC>:close<CR>
@@ -218,12 +218,62 @@ vmap <C-f> <ESC>:Files<CR>
 imap <C-b> <ESC>:NERDTreeToggle<CR>
 nmap <C-b> <ESC>:NERDTreeToggle<CR>
 vmap <C-b> <ESC>:NERDTreeToggle<CR>
-
+"--NVIMTREE_TOGGLE
+imap <C-A-b> <ESC>:NvimTreeToggle<CR>
+nmap <C-A-b> <ESC>:NvimTreeToggle<CR>
+vmap <C-A-b> <ESC>:NvimTreeToggle<CR>
+"--SHOW OPENED FIES
+imap <C-S-LEFT> <ESC>:buffer 
+nmap <C-S-LEFT> <ESC>:buffer 
+vmap <C-S-LEFT> <ESC>:buffer 
+"--OPEN MINIMAP
+imap <C-S-RIGHT> <ESC>:MinimapToggle<CR>
+nmap <C-S-RIGHT> <ESC>:MinimapToggle<CR>
+vmap <C-S-RIGHT> <ESC>:MinimapToggle<CR>
+"--SHOW EDITABLE FILE SYSTEM
+imap <C-S-UP> <ESC>:edit 
+nmap <C-S-UP> <ESC>:edit 
+vmap <C-S-UP> <ESC>:edit 
+"--CLOSE OPENED FIES
+imap <C-S-DOWN> <ESC>:bdelete 
+nmap <C-S-DOWN> <ESC>:bdelete 
+vmap <C-S-DOWN> <ESC>:bdelete  
+"--MOVE UP 5 POINTS
+imap <S-UP> <ESC>:-2<CR>
+nmap <S-UP> <ESC>:-2<CR>
+vmap <S-UP> <ESC>:-2<CR>
+"--MOVE DOWN 5 POINTS
+imap <S-DOWN> <ESC>:+2<CR>
+nmap <S-DOWN> <ESC>:+2<CR>
+vmap <S-DOWN> <ESC>:+2<CR>
+"--MOVE UP 5 POINTS
+imap <C-UP> <ESC>:-5<CR>
+nmap <C-UP> <ESC>:-5<CR>
+vmap <C-UP> <ESC>:-5<CR>
+"--MOVE DOWN 5 POINTS
+imap <C-DOWN> <ESC>:+5<CR>
+nmap <C-DOWN> <ESC>:+5<CR>
+vmap <C-DOWN> <ESC>:+5<CR>
+"--UNDO
+imap <C-z> <ESC>:undo<CR>
+nmap <C-z> <ESC>:undo<CR>
+vmap <C-z> <ESC>:undo<CR>
+"--REDO
+imap <C-y> <ESC>:redo<CR>
+nmap <C-y> <ESC>:redo<CR>
+vmap <C-y> <ESC>:redo<CR>
+"--SELECT ALL LINES
+imap <C-A-a> <ESC>G$v0gg
+nmap <C-A-a> <ESC>G$v0gg
+nmap <C-A-a> <ESC>G$v0gg
+"--COMMENTS
+imap <A-'> <ESC>:CommentToggle<CR>
+nmap <A-'> :CommentToggle<CR>
+vmap <A-'> :CommentToggle<CR>
 
 "--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
 "REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
 
 lua << EOF
 
@@ -241,14 +291,19 @@ function Kclose_buffers()
 	local name = vim.api.nvim_buf_get_name(current_buffer)
 	local count = Kbuffer_length()
 	if count > 1 then
+		vim.cmd(":NERDTreeClose")
+ 		vim.cmd(":NvimTreeClose")
 		vim.api.nvim_buf_delete(current_buffer, { force })
 		return
 	end
 	if name ~= '' then
 		vim.api.nvim_buf_delete(0, { force })
+		--vim.cmd(":Telescope file_browser")
+		vim.cmd(":NERDTreeFocus")
 		vim.cmd(":Startify")
 		--vim.cmd(":Explore")
 	end
 end
 
 EOF
+

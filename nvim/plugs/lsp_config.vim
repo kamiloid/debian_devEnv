@@ -106,6 +106,7 @@ require'lspconfig'.eslint.setup{}
 require'lspconfig'.jsonls.setup{}
 require'lspconfig'.sqlls.setup{}
 require'lspconfig'.vimls.setup{}
+require'lspconfig'.phpactor.setup{}
 
 
 EOF
