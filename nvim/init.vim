@@ -149,8 +149,16 @@ command! FB :Telescope file_browser
 command! CM :CommentToggle
 
 "KEY-BINDING////////////////////////////
+"--IDENTATION////////////////
+imap <TAB> <ESC>:><CR>A
+nmap <TAB> <ESC>:><CR>
+vmap <TAB> <ESC>:><CR>
+"--BACK IDENTATION///////////
+imap <S-TAB> <ESC>:<<CR>A
+nmap <S-TAB> <ESC>:<<CR>
+vmap <S-TAB> <ESC>:<<CR>
 "--SAVE FILE///////////////
-imap <C-s> <ESC>:w!<CR>
+imap <C-s> <ESC>:w!<CR>a
 nmap <C-s> <ESC>:w!<CR>
 vmap <C-s> <ESC>:w!<CR>
 "--RESET EDITOR////////////
@@ -223,21 +231,21 @@ imap <C-A-b> <ESC>:NvimTreeToggle<CR>
 nmap <C-A-b> <ESC>:NvimTreeToggle<CR>
 vmap <C-A-b> <ESC>:NvimTreeToggle<CR>
 "--SHOW OPENED FIES
-imap <C-S-LEFT> <ESC>:buffer 
-nmap <C-S-LEFT> <ESC>:buffer 
-vmap <C-S-LEFT> <ESC>:buffer 
+imap <C-A-l> <ESC>:buffer 
+nmap <C-A-l> <ESC>:buffer 
+vmap <C-A-l> <ESC>:buffer 
 "--OPEN MINIMAP
-imap <C-S-RIGHT> <ESC>:MinimapToggle<CR>
-nmap <C-S-RIGHT> <ESC>:MinimapToggle<CR>
-vmap <C-S-RIGHT> <ESC>:MinimapToggle<CR>
+imap <C-A-u> <ESC>:MinimapToggle<CR>
+nmap <C-A-u> <ESC>:MinimapToggle<CR>
+vmap <C-A-u> <ESC>:MinimapToggle<CR>
 "--SHOW EDITABLE FILE SYSTEM
-imap <C-S-UP> <ESC>:edit 
-nmap <C-S-UP> <ESC>:edit 
-vmap <C-S-UP> <ESC>:edit 
+imap <C-A-e> <ESC>:edit 
+nmap <C-A-e> <ESC>:edit 
+vmap <C-A-e> <ESC>:edit 
 "--CLOSE OPENED FIES
-imap <C-S-DOWN> <ESC>:bdelete 
-nmap <C-S-DOWN> <ESC>:bdelete 
-vmap <C-S-DOWN> <ESC>:bdelete  
+imap <C-A-d> <ESC>:bdelete 
+nmap <C-A-d> <ESC>:bdelete 
+vmap <C-A-d> <ESC>:bdelete  
 "--MOVE UP 5 POINTS
 imap <S-UP> <ESC>:-2<CR>
 nmap <S-UP> <ESC>:-2<CR>
