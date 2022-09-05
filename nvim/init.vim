@@ -279,6 +279,17 @@ imap <A-'> <ESC>:CommentToggle<CR>
 nmap <A-'> :CommentToggle<CR>
 vmap <A-'> :CommentToggle<CR>
 
+
+nmap <A-g> <ESC>:lua require('goto-preview').goto_preview_references()<CR>
+
+command! GD :lua require('goto-preview').goto_preview_definition()<CR>
+command! GDT :lua require('goto-preview').goto_preview_type_definition()<CR>
+command! GI :lua require('goto-preview').goto_preview_implementation()<CR>
+command! GC :lua require('goto-preview').close_all_win()<CR>
+" Only set if you have telescope installed
+command! GR :lua require('goto-preview').goto_preview_references()<CR>
+
+
 "--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
 "REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"

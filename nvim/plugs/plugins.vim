@@ -7,6 +7,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
+Plug 'rmagatti/goto-preview'
 
 "--DEPS
 Plug 'voldikss/vim-floaterm'
@@ -49,4 +50,9 @@ source $HOME/.config/nvim/plugs/lsp_config.vim
 source $HOME/.config/nvim/plugs/LSPInstaller_conf.vim
 source $HOME/.config/nvim/plugs/nvtree_conf.vim
 source $HOME/.config/nvim/plugs/cursorline_conf.vim
+source $HOME/.config/nvim/plugs/goto_preview_conf.vim
+
+
+
+
 
