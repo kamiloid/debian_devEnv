@@ -145,7 +145,6 @@ command! CB :Clap buffers
 command! CF :Clap files
 command! CC :Clap colors
 command! CY :Clap yanks
-command! FB :Telescope file_browser
 command! CM :CommentToggle
 
 "KEY-BINDING////////////////////////////
@@ -173,10 +172,6 @@ vmap <C-q> <ESC>:q!<CR>
 imap <A-q> <ESC>:lua Kclose_buffers()<CR>
 nmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 vmap <A-q> <ESC>:lua Kclose_buffers()<CR>
-"--TAB EXPLORER////////////
-imap <A-f> <ESC>:Telescope file_browser<CR>
-nmap <A-f> <ESC>:Telescope file_browser<CR>
-vmap <A-f> <ESC>:Telescope file_browser<CR>
 "--NEW TAB
 imap <A-t> <ESC>:tabnew<CR>:Explore<CR>
 nmap <A-t> <ESC>:tabnew<CR>:Explore<CR>
@@ -278,17 +273,6 @@ nmap <C-A-a> <ESC>G$v0gg
 imap <A-'> <ESC>:CommentToggle<CR>
 nmap <A-'> :CommentToggle<CR>
 vmap <A-'> :CommentToggle<CR>
-
-
-nmap <A-g> <ESC>:lua require('goto-preview').goto_preview_references()<CR>
-
-command! GD :lua require('goto-preview').goto_preview_definition()<CR>
-command! GDT :lua require('goto-preview').goto_preview_type_definition()<CR>
-command! GI :lua require('goto-preview').goto_preview_implementation()<CR>
-command! GC :lua require('goto-preview').close_all_win()<CR>
-" Only set if you have telescope installed
-command! GR :lua require('goto-preview').goto_preview_references()<CR>
-
 
 "--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
 "REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete

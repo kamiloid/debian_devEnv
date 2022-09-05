@@ -22,6 +22,8 @@ Plug 'https://github.com/yamatsum/nvim-cursorline'
 Plug 'terryma/vim-multiple-cursors'
 Plug   'eugen0329/vim-esearch'
 
+Plug 'folke/twilight.nvim'
+
 "--STARTIFY
 " Plug 'mhinz/vim-startify'
 
@@ -43,14 +45,17 @@ call plug#end()
 
 "------- PLUGINS CONFIG -------------------------------
 "------------------------------------------------------
-source $HOME/.config/nvim/plugs/lualine_conf.vim
-source $HOME/.config/nvim/plugs/barbar_conf.vim
-source $HOME/.config/nvim/plugs/wilder_conf.vim
-source $HOME/.config/nvim/plugs/lsp_config.vim
-source $HOME/.config/nvim/plugs/LSPInstaller_conf.vim
-source $HOME/.config/nvim/plugs/nvtree_conf.vim
-source $HOME/.config/nvim/plugs/cursorline_conf.vim
-source $HOME/.config/nvim/plugs/goto_preview_conf.vim
+source $HOME/.config/nvim/plugs/configs/lualine_conf.vim
+source $HOME/.config/nvim/plugs/configs/barbar_conf.vim
+source $HOME/.config/nvim/plugs/configs/wilder_conf.vim
+source $HOME/.config/nvim/plugs/configs/lsp_config.vim
+source $HOME/.config/nvim/plugs/configs/LSPInstaller_conf.vim
+source $HOME/.config/nvim/plugs/configs/nvtree_conf.vim
+source $HOME/.config/nvim/plugs/configs/cursorline_conf.vim
+source $HOME/.config/nvim/plugs/configs/goto_preview_conf.vim
+source $HOME/.config/nvim/plugs/configs/twilight_conf.vim
+
+
 
 
 

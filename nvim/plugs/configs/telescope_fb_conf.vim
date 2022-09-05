@@ -24,3 +24,11 @@ require("telescope").setup {
 require("telescope").load_extension "file_browser"
 
 EOF
+
+
+command! FB :Telescope file_browser
+
+"--TAB EXPLORER////////////
+imap <A-f> <ESC>:Telescope file_browser<CR>
+nmap <A-f> <ESC>:Telescope file_browser<CR>
+vmap <A-f> <ESC>:Telescope file_browser<CR>

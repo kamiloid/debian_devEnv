@@ -21,12 +21,21 @@ return require('packer').startup(function(use)
 	use { "nvim-telescope/telescope-file-browser.nvim" }
 	use "terrortylor/nvim-comment"
 
+	use ({"ziontee113/color-picker.nvim",
+		config = function()
+			require("color-picker")
+		end,
+	})
 end)
 
 
 EOF
 
-source $HOME/.config/nvim/plugs/startup_conf.vim
-source $HOME/.config/nvim/plugs/telescope_fb_conf.vim
+source $HOME/.config/nvim/plugs/configs/startup_conf.vim
+source $HOME/.config/nvim/plugs/configs/telescope_fb_conf.vim
+source $HOME/.config/nvim/plugs/configs/colorpicker_conf.vim
 
 lua require('nvim_comment').setup()
+
+
+

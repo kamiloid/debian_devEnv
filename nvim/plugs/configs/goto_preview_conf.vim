@@ -21,3 +21,16 @@ require('goto-preview').setup {
 }
 
 EOF
+
+
+command! GD :lua require('goto-preview').goto_preview_definition()<CR>
+command! GDT :lua require('goto-preview').goto_preview_type_definition()<CR>
+command! GI :lua require('goto-preview').goto_preview_implementation()<CR>
+command! GC :lua require('goto-preview').close_all_win()<CR>
+" Only set if you have telescope installed
+command! GR :lua require('goto-preview').goto_preview_references()<CR>
+
+
+imap <A-g> <ESC>:lua require('goto-preview').goto_preview_references()<CR>
+nmap <A-g> <ESC>:lua require('goto-preview').goto_preview_references()<CR>
+vmap <A-g> <ESC>:lua require('goto-preview').goto_preview_references()<CR>
