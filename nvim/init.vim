@@ -152,13 +152,13 @@ command! CM :CommentToggle
 "--IDENTATION////////////////
 imap <TAB> <ESC>:><CR>A
 nmap <TAB> <ESC>:><CR>
-vmap <TAB> <ESC>:><CR>
+vmap <TAB> :><CR>
 "--BACK IDENTATION///////////
 imap <S-TAB> <ESC>:<<CR>A
 nmap <S-TAB> <ESC>:<<CR>
-vmap <S-TAB> <ESC>:<<CR>
+vmap <S-TAB> :<<CR>
 "--SAVE FILE///////////////
-imap <C-s> <ESC>:w!<CR>a
+imap <C-s> <ESC>:w!<CR>
 nmap <C-s> <ESC>:w!<CR>
 vmap <C-s> <ESC>:w!<CR>
 "--RESET EDITOR////////////
@@ -306,9 +306,10 @@ function Kclose_buffers()
 	end
 	if name ~= '' then
 		vim.api.nvim_buf_delete(0, { force })
+		vim.cmd(":NvimTreeOpen")
 		--vim.cmd(":Telescope file_browser")
-		vim.cmd(":NERDTreeFocus")
-		vim.cmd(":Startify")
+		--vim.cmd(":NERDTreeFocus")
+		--vim.cmd(":Startify")
 		--vim.cmd(":Explore")
 	end
 end

@@ -16,6 +16,7 @@ require("nvim-tree").setup({
         { key = "u", action = "dir_up" },
       },
     },
+	signcolumn = "yes"
   },
   renderer = {
     group_empty = true,
@@ -26,5 +27,4 @@ require("nvim-tree").setup({
 })
 
 EOF
-
 

@@ -22,7 +22,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug   'eugen0329/vim-esearch'
 
 "--STARTIFY
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 
 "--COLORSCHEMES
 Plug 'rafi/awesome-vim-colorschemes'
