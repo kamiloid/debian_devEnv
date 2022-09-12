@@ -165,9 +165,12 @@ imap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 nmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 vmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 "--QUIT////////////////////
-imap <C-q> <ESC>:q!<CR>
-nmap <C-q> <ESC>:q!<CR>
-vmap <C-q> <ESC>:q!<CR>
+" imap <C-q> <ESC>:q!<CR>
+" nmap <C-q> <ESC>:q!<CR>
+" vmap <C-q> <ESC>:q!<CR>
+imap <C-q> <ESC>:lua Kclose_all()<CR>
+nmap <C-q> <ESC>:lua Kclose_all()<CR>
+vmap <C-q> <ESC>:lua Kclose_all()<CR>
 "--CLOSE BUFFERS UNTIL EXPLORER//////////////////
 imap <A-q> <ESC>:lua Kclose_buffers()<CR>
 nmap <A-q> <ESC>:lua Kclose_buffers()<CR>
@@ -279,6 +282,12 @@ vmap <A-'> :CommentToggle<CR>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 lua << EOF
+
+function Kclose_all()
+	vim.cmd(":NERDTreeClose")
+	vim.cmd(":NvimTreeClose")
+	vim.cmd(":q!")
+end
 
 function Kbuffer_length()
 	local count = 0
