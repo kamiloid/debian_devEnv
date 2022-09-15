@@ -31,6 +31,8 @@ end)
 
 EOF
 
+
+source $HOME/.config/nvim/plugs/configs/nvtree_conf.vim
 source $HOME/.config/nvim/plugs/configs/startup_conf.vim
 source $HOME/.config/nvim/plugs/configs/telescope_fb_conf.vim
 source $HOME/.config/nvim/plugs/configs/colorpicker_conf.vim
