@@ -9,6 +9,18 @@ Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'rmagatti/goto-preview'
 
+Plug 'https://github.com/onsails/lspkind.nvim'
+
+" https://github.com/ray-x/lsp_signature.nvim
+Plug 'ray-x/lsp_signature.nvim'
+
+" https://github.com/RishabhRD/nvim-lsputils
+" Plug 'RishabhRD/popfix'
+" Plug 'RishabhRD/nvim-lsputils'
+"
+" Complete lsp utils:
+" https://github.com/ray-x/navigator.lua
+
 "--DEPS
 Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-clap'
@@ -23,6 +35,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug   'eugen0329/vim-esearch'
 
 Plug 'folke/twilight.nvim'
+
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 "--STARTIFY
 " Plug 'mhinz/vim-startify'
@@ -54,7 +68,10 @@ source $HOME/.config/nvim/plugs/configs/nvtree_conf.vim
 source $HOME/.config/nvim/plugs/configs/cursorline_conf.vim
 source $HOME/.config/nvim/plugs/configs/goto_preview_conf.vim
 source $HOME/.config/nvim/plugs/configs/twilight_conf.vim
-
+source $HOME/.config/nvim/plugs/configs/indentLines_config.vim
+" source $HOME/.config/nvim/plugs/configs/lspUtils_conf.vim
+source $HOME/.config/nvim/plugs/configs/lspKind_conf.vim
+source $HOME/.config/nvim/plugs/configs/lspSignature_conf.vim
 
 
 
