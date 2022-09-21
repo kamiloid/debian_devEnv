@@ -38,6 +38,8 @@ Plug 'folke/twilight.nvim'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+Plug 'sunjon/shade.nvim'
+
 "--STARTIFY
 " Plug 'mhinz/vim-startify'
 
@@ -72,6 +74,7 @@ source $HOME/.config/nvim/plugs/configs/indentLines_config.vim
 " source $HOME/.config/nvim/plugs/configs/lspUtils_conf.vim
 source $HOME/.config/nvim/plugs/configs/lspKind_conf.vim
 source $HOME/.config/nvim/plugs/configs/lspSignature_conf.vim
+source $HOME/.config/nvim/plugs/configs/shade_conf.vim
 
 
 
