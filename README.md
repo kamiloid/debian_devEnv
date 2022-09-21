@@ -20,7 +20,7 @@ This repository includes:
 #
 The first step is go to master branch and check the files before to clone this repository. If you want to clone this project, I recommed you clone it outside of `~/.config` folder and after that, copy the `nvim` folder inside `~/.config`.
 When you clone the project, I prefer start install all in this order:
- 1. OhMyBash
+ 1. OhMyBash / OhMyPosh
  2. TMux
  3. XClip
  4. Ranger and VIfm
@@ -39,7 +39,7 @@ When you clone the project, I prefer start install all in this order:
 > Note: I prefer Beekeeper than Valentina Studio
 
 #
-## HoMyBash setup instructions
+## OhMyBash / OhMyPosh setup instructions
 Access to [https://ohmybash.nntoan.com/](https://ohmybash.nntoan.com/) or follow the instructions:
 * Install curl:
 
@@ -51,6 +51,20 @@ or
 This line download and install OhMyBash automatically.
 To deploy any theme, edit `.bashrc` and edit this line `OSH_THEME="[theme name]"`. You can view and choose one of these [themes](https://github.com/ohmybash/oh-my-bash/wiki/Themes).
 #
+The second option is install "OhMyPosh". OhMyPosh is a new environment more modern and with better themes than OhMyBash. This engine is felxible and is based on bash or zsh depends of your preference.
+To install "OhMyPosh" you can follow the next url: [https://ohmyposh.dev/docs/installation/linux] or type  the following command in terminal:
+
+    sudo  wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh  
+    sudo  chmod +x /usr/local/bin/oh-my-posh
+and download all themes typing this command:
+
+    mkdir ~/.poshthemes  
+    wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/themes.zip -O ~/.poshthemes/themes.zip  
+    unzip ~/.poshthemes/themes.zip -d ~/.poshthemes  
+    chmod u+rw ~/.poshthemes/*.omp.*  
+    rm ~/.poshthemes/themes.zip
+After download the engine and their themes, you can link "OhMyPosh" with bash or zsh following the next url [Linking OhMyPosh with bash or zsh](https://ohmyposh.dev/docs/installation/prompt).
+#
 
 ## TMux setup instructions
 * Debian install, type: `sudo apt install tmux`
@@ -60,7 +74,7 @@ Check this [link](https://github.com/tmux/tmux/wiki/Installing) to check setup i
 To start with Tmux, follow the [getting started.](https://github.com/tmux/tmux/wiki/Getting-Started)
 Follow this [keybindings](http://man.openbsd.org/OpenBSD-current/man1/tmux.1#DEFAULT_KEY_BINDINGS) to use the tool.
 
-To config Tmux, check in your user directory if it exists `.tmuc.conf`, but if this file not exists, you can create it with that name and edit it and paste this code:
+To config Tmux, check in your user directory if it exists `.tmux.conf`, but if this file not exists, you can create it with that name and edit it and paste this code:
 
     bind C-c run "tmux save-buffer - | xclip -i -sel clipboard"
     bind C-v run "tmux set-buffer "$(xclip -o -sel clipboard)"; tmux paste-buffer"
@@ -85,10 +99,9 @@ To config Tmux, check in your user directory if it exists `.tmuc.conf`, but if t
 
 To install a plugins package, follow this [link](https://github.com/tmux-plugins/tpm) or type: `https://github.com/tmux-plugins/tpm`.
 By default, in this configuration, the selected theme is `Powerline/default/red`. by the other hand, if you want to change the theme, you can edit the line `set -g @themepack '[theme_name]'`, where theme_name is referenced by [list of themes](https://github.com/jimeh/tmux-themepack).
-Save it and reset the session pressing this key sequence: `Ctrl+b+I` or restart the session.
+Save it and reset the session pressing this key sequence: `Ctrl+b & I` or restart the session.
 #
 
 #
 > This doc will continue with detailed instructions.
 > Until now, read the .txt files
-
