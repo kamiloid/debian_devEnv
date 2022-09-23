@@ -178,17 +178,17 @@ imap <A-q> <ESC>:lua Kclose_buffers()<CR>
 nmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 vmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 "--NEW TAB
-imap <A-t> <ESC>:tabnew<CR>:Explore<CR>
-nmap <A-t> <ESC>:tabnew<CR>:Explore<CR>
-vmap <A-t> <ESC>:tabnew<CR>:Explore<CR>
+imap <A-t> <ESC>:tabnew<CR>
+nmap <A-t> <ESC>:tabnew<CR>
+vmap <A-t> <ESC>:tabnew<CR>
 "--NEXT TAB
-imap <A-RIGHT> <ESC>:tabnext<CR>
-nmap <A-RIGHT> <ESC>:tabnext<CR>
-vmap <A-RIGHT> <ESC>:tabnext<CR>
+imap <A-RIGHT> <ESC>:vsplit<CR>
+nmap <A-RIGHT> <ESC>:vsplit<CR>
+vmap <A-RIGHT> <ESC>:vsplit<CR>
 "--PREV TAB
-imap <A-LEFT> <ESC>:tabprevious<CR>
-nmap <A-LEFT> <ESC>:tabprevious<CR>
-vmap <A-LEFT> <ESC>:tabprevious<CR>
+imap <A-LEFT> <ESC>:split<CR>
+nmap <A-LEFT> <ESC>:split<CR>
+vmap <A-LEFT> <ESC>:split<CR>
 "--REMOVE PANEL
 imap <A-c> <ESC>:close<CR>
 nmap <A-c> <ESC>:close<CR>
