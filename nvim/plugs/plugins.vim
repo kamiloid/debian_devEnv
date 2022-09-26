@@ -64,8 +64,8 @@ call plug#end()
 source $HOME/.config/nvim/plugs/configs/lualine_conf.vim
 source $HOME/.config/nvim/plugs/configs/barbar_conf.vim
 source $HOME/.config/nvim/plugs/configs/wilder_conf.vim
-source $HOME/.config/nvim/plugs/configs/lsp_config.vim
 source $HOME/.config/nvim/plugs/configs/LSPInstaller_conf.vim
+source $HOME/.config/nvim/plugs/configs/lsp_config.vim
 source $HOME/.config/nvim/plugs/configs/nvtree_conf.vim
 source $HOME/.config/nvim/plugs/configs/cursorline_conf.vim
 source $HOME/.config/nvim/plugs/configs/goto_preview_conf.vim
