@@ -1,4 +1,6 @@
+
 lua << EOF
+
 
 require 'jabs'.setup {
     -- Options for the main window
@@ -57,5 +59,3 @@ require 'jabs'.setup {
 }
 
 EOF
-
-command! BB :JABSOpen

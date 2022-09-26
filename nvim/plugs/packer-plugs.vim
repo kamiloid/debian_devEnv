@@ -27,19 +27,27 @@ return require('packer').startup(function(use)
 		end,
 	})
 	use 'matbme/JABS.nvim'
+
+	-- DAP (Depuration Adapter protocol)
+	use 'mfussenegger/nvim-dap'
+	use 'rcarriga/nvim-dap-ui'
+
+	-- Java LServer features
+	use 'mfussenegger/nvim-jdtls'
 end)
 
 
 EOF
 
-
-source $HOME/.config/nvim/plugs/configs/nvtree_conf.vim
 source $HOME/.config/nvim/plugs/configs/startup_conf.vim
 source $HOME/.config/nvim/plugs/configs/telescope_fb_conf.vim
 source $HOME/.config/nvim/plugs/configs/colorpicker_conf.vim
 source $HOME/.config/nvim/plugs/configs/JABS_conf.vim
+source $HOME/.config/nvim/plugs/configs/dap_conf/dap_conf.vim
+source $HOME/.config/nvim/plugs/configs/dap_conf/dap_ui_conf.vim
+
+source $HOME/.config/nvim/plugs/configs/lang/java_conf.vim
 
 lua require('nvim_comment').setup()
-
 
 

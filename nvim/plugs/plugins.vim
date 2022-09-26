@@ -8,18 +8,11 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'neovim/nvim-lspconfig'
 Plug 'rmagatti/goto-preview'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'kristijanhusak/vim-js-file-import', {'do': 'npm install'}
 
 Plug 'https://github.com/onsails/lspkind.nvim'
-
-" https://github.com/ray-x/lsp_signature.nvim
 Plug 'ray-x/lsp_signature.nvim'
-
-" https://github.com/RishabhRD/nvim-lsputils
-" Plug 'RishabhRD/popfix'
-" Plug 'RishabhRD/nvim-lsputils'
-"
-" Complete lsp utils:
-" https://github.com/ray-x/navigator.lua
 
 "--DEPS
 Plug 'voldikss/vim-floaterm'
@@ -79,5 +72,9 @@ source $HOME/.config/nvim/plugs/configs/shade_conf.vim
 
 
 
+" set tagfunc=jsfileimport#tagfunc
+" let g:js_file_import_sort_after_insert = 1
+" let g:js_file_import_use_fzf = 1
+" let g:js_file_import_use_telescope = 1
 
 
