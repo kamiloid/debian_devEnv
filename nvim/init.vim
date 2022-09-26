@@ -19,6 +19,11 @@ syntax on
 
 set encoding=UTF-8
 
+sign define DiagnosticSignError text= texthl=DiagnosticSignError linehl= numhl=
+sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=
+sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=
+sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=
+
 "ITALIC FONTS/////////////////////////
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
@@ -165,28 +170,25 @@ imap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 nmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 vmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 "--QUIT////////////////////
-" imap <C-q> <ESC>:q!<CR>
-" nmap <C-q> <ESC>:q!<CR>
-" vmap <C-q> <ESC>:q!<CR>
-imap <C-q> <ESC>:lua Kclose_all()<CR>
-nmap <C-q> <ESC>:lua Kclose_all()<CR>
-vmap <C-q> <ESC>:lua Kclose_all()<CR>
+imap <C-q> <ESC>:NERDTreeClose<ESC>:NvimTreeClose<ESC>:q!<CR>
+nmap <C-q> <ESC>:NERDTreeClose<ESC>:NvimTreeClose<ESC>:q!<CR>
+vmap <C-q> <ESC>:NERDTreeClose<ESC>:NvimTreeClose<ESC>:q!<CR>
 "--CLOSE BUFFERS UNTIL EXPLORER//////////////////
 imap <A-q> <ESC>:lua Kclose_buffers()<CR>
 nmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 vmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 "--NEW TAB
-imap <A-t> <ESC>:tabnew<CR>:Explore<CR>
-nmap <A-t> <ESC>:tabnew<CR>:Explore<CR>
-vmap <A-t> <ESC>:tabnew<CR>:Explore<CR>
+imap <A-t> <ESC>:tabnew<CR>
+nmap <A-t> <ESC>:tabnew<CR>
+vmap <A-t> <ESC>:tabnew<CR>
 "--NEXT TAB
-imap <A-RIGHT> <ESC>:tabnext<CR>
-nmap <A-RIGHT> <ESC>:tabnext<CR>
-vmap <A-RIGHT> <ESC>:tabnext<CR>
+imap <A-RIGHT> <ESC>:vsplit<CR>
+nmap <A-RIGHT> <ESC>:vsplit<CR>
+vmap <A-RIGHT> <ESC>:vsplit<CR>
 "--PREV TAB
-imap <A-LEFT> <ESC>:tabprevious<CR>
-nmap <A-LEFT> <ESC>:tabprevious<CR>
-vmap <A-LEFT> <ESC>:tabprevious<CR>
+imap <A-LEFT> <ESC>:split<CR>
+nmap <A-LEFT> <ESC>:split<CR>
+vmap <A-LEFT> <ESC>:split<CR>
 "--REMOVE PANEL
 imap <A-c> <ESC>:close<CR>
 nmap <A-c> <ESC>:close<CR>
@@ -279,11 +281,12 @@ vmap <A-'> :CommentToggle<CR>
 
 "--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
 "REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : compe#confirm({ 'keys': '<CR>', 'select': v:true })
 
 lua << EOF
 
-function Kclose_all()
+function Kclose_editor()
 	vim.cmd(":NERDTreeClose")
 	vim.cmd(":NvimTreeClose")
 	vim.cmd(":q!")
