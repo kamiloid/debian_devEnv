@@ -45,7 +45,7 @@ let NERDTreeWinPos=1
 
 "COLORS & COLORSCHEME//////////////////
 "colorscheme challenger_depp
-colorscheme ayu
+"colorscheme ayu
 "colorscheme chocolate
 "colorscheme chocolate-contrast
 "colorscheme codecourse
@@ -114,7 +114,7 @@ colorscheme ayu
 "colorscheme storm-contrast
 "colorscheme tetra-contrast
 "colorscheme tickle-contrast
-"colorscheme tokionight
+colorscheme tokyonight
 "colorscheme tonic-contrast
 "colorscheme turnip
 "colorscheme two-firewatch

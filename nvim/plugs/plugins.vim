@@ -64,6 +64,7 @@ call plug#end()
 
 "------- PLUGINS CONFIG -------------------------------
 "------------------------------------------------------
+source $HOME/.config/nvim/plugs/configs/schemes_conf.vim
 source $HOME/.config/nvim/plugs/configs/lualine_conf.vim
 source $HOME/.config/nvim/plugs/configs/barbar_conf.vim
 source $HOME/.config/nvim/plugs/configs/wilder_conf.vim
