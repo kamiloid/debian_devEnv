@@ -32,13 +32,16 @@ Plug 'gelguy/wilder.nvim'
 Plug 'https://github.com/yamatsum/nvim-cursorline'
 
 Plug 'terryma/vim-multiple-cursors'
-Plug   'eugen0329/vim-esearch'
 
 Plug 'folke/twilight.nvim'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'sunjon/shade.nvim'
+
+"--GREP
+Plug 'dyng/ctrlsf.vim'
+" Plug 'eugen0329/vim-esearch'
 
 "--STARTIFY
 " Plug 'mhinz/vim-startify'
@@ -75,6 +78,7 @@ source $HOME/.config/nvim/plugs/configs/indentLines_config.vim
 source $HOME/.config/nvim/plugs/configs/lspKind_conf.vim
 source $HOME/.config/nvim/plugs/configs/lspSignature_conf.vim
 source $HOME/.config/nvim/plugs/configs/shade_conf.vim
+source $HOME/.config/nvim/plugs/configs/CtrlSF_conf.vim
 
 
 

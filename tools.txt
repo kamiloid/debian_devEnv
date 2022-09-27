@@ -6,6 +6,10 @@ Download nvim-linux64.deb from releases: https://github.com/neovim/neovim/releas
 Install the package using sudo apt install ./nvim-linux64.deb
 Run nvim
 
+Install ag to search with NeoVim and CtrSF Plugin
+https://github.com/ggreer/the_silver_searcher
+apt-get install silversearcher-ag
+
 Nodejs install reference:
 https://github.com/nodesource/distributions/blob/master/README.md#debinstall
 
