@@ -27,6 +27,8 @@ return require('packer').startup(function(use)
 		end,
 	})
 	use 'matbme/JABS.nvim'
+
+	use {"folke/zen-mode.nvim"}
 end)
 
 
@@ -38,6 +40,7 @@ source $HOME/.config/nvim/plugs/configs/startup_conf.vim
 source $HOME/.config/nvim/plugs/configs/telescope_fb_conf.vim
 source $HOME/.config/nvim/plugs/configs/colorpicker_conf.vim
 source $HOME/.config/nvim/plugs/configs/JABS_conf.vim
+source $HOME/.config/nvim/plugs/configs/zen-mode_conf.vim
 
 lua require('nvim_comment').setup()
 
