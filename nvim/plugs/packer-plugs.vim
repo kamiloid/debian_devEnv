@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
 	use 'matbme/JABS.nvim'
 
 	use {"folke/zen-mode.nvim"}
+	use 'm4xshen/autoclose.nvim'
 end)
 
 
