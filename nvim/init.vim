@@ -247,21 +247,21 @@ imap <C-A-d> <ESC>:bdelete
 nmap <C-A-d> <ESC>:bdelete 
 vmap <C-A-d> <ESC>:bdelete  
 "--MOVE UP 5 POINTS
-imap <S-UP> <ESC>:-2<CR>
-nmap <S-UP> <ESC>:-2<CR>
-vmap <S-UP> <ESC>:-2<CR>
-"--MOVE DOWN 5 POINTS
-imap <S-DOWN> <ESC>:+2<CR>
-nmap <S-DOWN> <ESC>:+2<CR>
-vmap <S-DOWN> <ESC>:+2<CR>
+" imap <S-UP> <ESC>:-2<CR>
+" nmap <S-UP> <ESC>:-2<CR>
+" vmap <S-UP> <ESC>:-2<CR>
+" "--MOVE DOWN 5 POINTS
+" imap <S-DOWN> <ESC>:+2<CR>
+" nmap <S-DOWN> <ESC>:+2<CR>
+" vmap <S-DOWN> <ESC>:+2<CR>
 "--MOVE UP 5 POINTS
-imap <C-UP> <ESC>:-5<CR>
-nmap <C-UP> <ESC>:-5<CR>
-vmap <C-UP> <ESC>:-5<CR>
+imap <S-UP> <ESC>:-5<CR>
+nmap <S-UP> <ESC>:-5<CR>
+vmap <S-UP> <ESC>:-5<CR>
 "--MOVE DOWN 5 POINTS
-imap <C-DOWN> <ESC>:+5<CR>
-nmap <C-DOWN> <ESC>:+5<CR>
-vmap <C-DOWN> <ESC>:+5<CR>
+imap <S-DOWN> <ESC>:+5<CR>
+nmap <S-DOWN> <ESC>:+5<CR>
+vmap <S-DOWN> <ESC>:+5<CR>
 "--UNDO
 imap <C-z> <ESC>:undo<CR>
 nmap <C-z> <ESC>:undo<CR>
