@@ -18,7 +18,7 @@ Plug 'ray-x/lsp_signature.nvim'
 " Complete lsp utils:
 " https://github.com/ray-x/navigator.lua
 
-"--DEPS
+"--UTILITIES
 Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-clap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -30,6 +30,7 @@ Plug 'https://github.com/yamatsum/nvim-cursorline'
 Plug 'folke/twilight.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'sunjon/shade.nvim'
+Plug 'wfxr/minimap.vim'
 
 "--Multiple cursors
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -50,7 +51,6 @@ Plug 'ghifarit53/tokyonight-vim'
 "--STATUS BARS & TABBARS
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'romgrk/barbar.nvim'
-Plug 'wfxr/minimap.vim'
 
 "--ICOS
 Plug 'ryanoasis/vim-devicons'

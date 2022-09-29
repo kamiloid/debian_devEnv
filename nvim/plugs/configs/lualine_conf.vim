@@ -1,9 +1,34 @@
 lua << EOF
+local colors = {
+  bg       = '#202328',
+  fg       = '#bbc2cf',
+  yellow   = '#ECBE7B',
+  cyan     = '#008080',
+  darkblue = '#081633',
+  green    = '#98be65',
+  orange   = '#FF8800',
+  violet   = '#a9a1e1',
+  magenta  = '#c678dd',
+  blue     = '#51afef',
+  red      = '#ec5f67',
+}
 
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+--	theme = 'ayu_dark',
+--	theme = 'ayu_light',
+--	theme = 'ayu_mirage',
+--	theme = 'codedark',
+--	theme = 'dracula',
+--	theme = 'gruvbox_dark',
+--	theme = 'gruvbox_light',
+	theme = 'horizon',
+--	theme = 'papercolor_dark',
+--	theme = 'papercolor_light',
+--	theme = 'solarized_dark',
+--	theme = 'solarized_light',
+--	theme = 'Tomorrow',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
