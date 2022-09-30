@@ -6,7 +6,6 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'neovim/nvim-lspconfig'
 Plug 'rmagatti/goto-preview'
 Plug 'https://github.com/onsails/lspkind.nvim'
 " https://github.com/ray-x/lsp_signature.nvim

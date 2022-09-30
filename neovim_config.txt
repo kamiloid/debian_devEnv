@@ -13,3 +13,15 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 
 Basic settings reference:
 https://dev.to/elvessousa/my-basic-neovim-setup-253l
+
+Lua languaje server:
+Download the latest bin
+https://github.com/sumneko/lua-language-server/releases
+download it in: ~/.config/lsp/
+create a folder named "lua-languaje-server" and decompress the file within
+
+in bashrc or zshrc depend of the terminal engine, type:
+export PATH="${HOME}/.config/lsp/lua-language-server/bin:${PATH}"
+
+in nvim config type the setup in sumneko section from the server list:
+https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua

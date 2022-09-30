@@ -22,7 +22,7 @@ require("nvim-tree").setup({
 		open_win_config = {
 			relative = "editor",
 			anchor = "NE",
-			border = "rounded",
+			border = {"╔", "═" ,"╗", "║", "╝", "═", "╚", "║" },
 			width = 50,
 			height = 30,
 			row = 100 - 1,
