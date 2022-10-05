@@ -1,5 +1,3 @@
-let g:nvim_tree_indent_markers = 1
-
 lua << EOF
 
 -- OR setup with some options
@@ -32,7 +30,8 @@ require("nvim-tree").setup({
   },
   renderer = {
 	highlight_opened_files = "all",
-	root_folder_modifier = ":p:."
+	root_folder_modifier = ":p:.",
+	indent_markers = {enable = true}
   },
   filters = {
     dotfiles = true,
@@ -40,4 +39,3 @@ require("nvim-tree").setup({
 })
 
 EOF
-

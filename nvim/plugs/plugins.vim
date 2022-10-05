@@ -8,6 +8,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'rmagatti/goto-preview'
 Plug 'https://github.com/onsails/lspkind.nvim'
+Plug 'folke/trouble.nvim'
 " https://github.com/ray-x/lsp_signature.nvim
 Plug 'ray-x/lsp_signature.nvim'
 " https://github.com/RishabhRD/nvim-lsputils
@@ -76,6 +77,7 @@ source $HOME/.config/nvim/plugs/configs/lspSignature_conf.vim
 source $HOME/.config/nvim/plugs/configs/shade_conf.vim
 source $HOME/.config/nvim/plugs/configs/CtrlSF_conf.vim
 source $HOME/.config/nvim/plugs/configs/multi-cursor_conf.vim
+source $HOME/.config/nvim/plugs/configs/trouble_conf.vim
 
 
 
