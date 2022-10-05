@@ -5,7 +5,8 @@ require 'jabs'.setup {
     position = 'corner', -- center, corner. Default corner
     width = 60, -- default 50
     height = 20, -- default 10
-    border = 'double', -- none, single, double, rounded, solid, shadow, (or an array or chars). Default shadow
+--    border = 'double', -- none, single, double, rounded, solid, shadow, (or an array or chars). Default shadow
+	border = {"┏", "━" ,"┓", "┃", "┛", "━", "┗", "┃" },
 
     offset = { -- window position offset
         top = 2, -- default 0
@@ -19,7 +20,8 @@ require 'jabs'.setup {
     preview = {
         width = 100, -- default 70
         height = 60, -- default 30
-        border = 'double', -- none, single, double, rounded, solid, shadow, (or an array or chars). Default double
+--        border = 'double', -- none, single, double, rounded, solid, shadow, (or an array or chars). Default double
+		border = {"┏", "━" ,"┓", "┃", "┛", "━", "┗", "┃" },
     },
 
     -- Default highlights (must be a valid :highlight)
