@@ -194,21 +194,21 @@ imap <A-c> <ESC>:close<CR>
 nmap <A-c> <ESC>:close<CR>
 vmap <A-c> <ESC>:close<CR>
 "--RESIZE RIGHT PANEL VERTICALLY
-imap <A-m> <ESC>:vertical resize +5<CR>
-nmap <A-m> <ESC>:vertical resize +5<CR>
-vmap <A-m> <ESC>:vertical resize +5<CR>
+imap <leader><LEFT> <ESC>:vertical resize +5<CR>
+nmap <leader><LEFT> <ESC>:vertical resize +5<CR>
+vmap <leader><LEFT> <ESC>:vertical resize +5<CR>
 "--RESIZE LEFT PANEL VERTICALLY
-imap <A-n> <ESC>:vertical resize -5<CR>
-nmap <A-n> <ESC>:vertical resize -5<CR>
-vmap <A-n> <ESC>:vertical resize -5<CR>
+imap <leader><RIGHT> <ESC>:vertical resize -5<CR>
+nmap <leader><RIGHT> <ESC>:vertical resize -5<CR>
+vmap <leader><RIGHT> <ESC>:vertical resize -5<CR>
 "--RESIZE DOWN PANEL HORIZONTALLY
-imap <A-N> <ESC>:resize +5<CR>
-nmap <A-N> <ESC>:resize +5<CR>
-vmap <A-N> <ESC>:resize +5<CR>
+imap <leader><UP> <ESC>:resize +5<CR>
+nmap <leader><UP> <ESC>:resize +5<CR>
+vmap <leader><UP> <ESC>:resize +5<CR>
 "--RESIZE UP PANEL HORIZONTALLY
-imap <A-M> <ESC>:resize -5<CR>
-nmap <A-M> <ESC>:resize -5<CR>
-vmap <A-M> <ESC>:resize -5<CR>
+imap <leader><DOWN> <ESC>:resize -5<CR>
+nmap <leader><DOWN> <ESC>:resize -5<CR>
+vmap <leader><DOWN> <ESC>:resize -5<CR>
 
 "--TOGGLE DARK COLOR SCHEME
 imap <A-k> <ESC>:set background=dark<CR>

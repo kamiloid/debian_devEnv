@@ -2,10 +2,10 @@ lua << EOF
 
 require 'jabs'.setup {
     -- Options for the main window
-    position = 'center', -- center, corner. Default corner
-    width = 80, -- default 50
+    position = 'corner', -- center, corner. Default corner
+    width = 60, -- default 50
     height = 20, -- default 10
-    border = 'single', -- none, single, double, rounded, solid, shadow, (or an array or chars). Default shadow
+    border = 'double', -- none, single, double, rounded, solid, shadow, (or an array or chars). Default shadow
 
     offset = { -- window position offset
         top = 2, -- default 0
@@ -17,9 +17,9 @@ require 'jabs'.setup {
     -- Options for preview window
     preview_position = 'left', -- top, bottom, left, right. Default top
     preview = {
-        width = 40, -- default 70
+        width = 100, -- default 70
         height = 60, -- default 30
-        border = 'single', -- none, single, double, rounded, solid, shadow, (or an array or chars). Default double
+        border = 'double', -- none, single, double, rounded, solid, shadow, (or an array or chars). Default double
     },
 
     -- Default highlights (must be a valid :highlight)
