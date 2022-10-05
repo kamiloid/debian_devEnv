@@ -23,14 +23,25 @@ require('goto-preview').setup {
 EOF
 
 
-command! GD :lua require('goto-preview').goto_preview_definition()<CR>
-command! GDT :lua require('goto-preview').goto_preview_type_definition()<CR>
-command! GI :lua require('goto-preview').goto_preview_implementation()<CR>
-command! GC :lua require('goto-preview').close_all_win()<CR>
+command! GotoDef :lua require('goto-preview').goto_preview_definition()<CR>
+command! GotoTypeDef :lua require('goto-preview').goto_preview_type_definition()<CR>
+command! GotoImp :lua require('goto-preview').goto_preview_implementation()<CR>
+command! GotoCLose :lua require('goto-preview').close_all_win()<CR>
 " Only set if you have telescope installed
-command! GR :lua require('goto-preview').goto_preview_references()<CR>
+command! GotoPrevRef :lua require('goto-preview').goto_preview_references()<CR>
 
+imap <leader>gd <ESC>:GotoDef<CR>
+nmap <leader>gd <ESC>:GotoDef<CR>
+vmap <leader>gd <ESC>:GotoDef<CR>
 
-imap <A-g> <ESC>:lua require('goto-preview').goto_preview_references()<CR>
-nmap <A-g> <ESC>:lua require('goto-preview').goto_preview_references()<CR>
-vmap <A-g> <ESC>:lua require('goto-preview').goto_preview_references()<CR>
+imap <leader>gdd <ESC>:GotoTypeDef<CR>
+nmap <leader>gdd <ESC>:GotoTypeDef<CR>
+vmap <leader>gdd <ESC>:GotoTypeDef<CR>
+
+imap <leader>gi <ESC>:GotoImp<CR>
+nmap <leader>gi <ESC>:GotoImp<CR>
+vmap <leader>gi <ESC>:GotoImp<CR>
+
+imap <leader>gp <ESC>:GotoPrevRef<CR>
+nmap <leader>gp <ESC>:GotoPrevRef<CR>
+vmap <leader>gp <ESC>:GotoPrevRef<CR>

@@ -61,3 +61,6 @@ require 'jabs'.setup {
 EOF
 
 command! BB :JABSOpen
+imap <leader>j <ESC>:BB<CR>
+nmap <leader>j <ESC>:BB<CR>
+vmap <leader>j <ESC>:BB<CR>
