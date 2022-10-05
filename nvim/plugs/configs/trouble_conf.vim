@@ -49,3 +49,7 @@ require("trouble").setup {
 }
 
 EOF
+
+imap <leader>t <ESC>:TroubleToggle<CR>
+nmap <leader>t <ESC>:TroubleToggle<CR>
+vmap <leader>t <ESC>:TroubleToggle<CR>
