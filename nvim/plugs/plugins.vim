@@ -48,6 +48,8 @@ Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rainglow/vim'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'tiagovla/tokyodark.nvim'
+Plug 'shaunsingh/moonlight.nvim'
+Plug 'nxvu699134/vn-night.nvim'
 
 "--STATUS BARS & TABBARS
 Plug 'nvim-lualine/lualine.nvim'
@@ -80,9 +82,6 @@ source $HOME/.config/nvim/plugs/configs/CtrlSF_conf.vim
 source $HOME/.config/nvim/plugs/configs/multi-cursor_conf.vim
 source $HOME/.config/nvim/plugs/configs/trouble_conf.vim
 source $HOME/.config/nvim/plugs/configs/colorschemes/tokyodark_conf.vim
-
-
-
-
+source $HOME/.config/nvim/plugs/configs/colorschemes/moonlight_conf.vim
 
 

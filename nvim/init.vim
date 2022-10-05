@@ -92,6 +92,7 @@ let NERDTreeWinPos=1
 "colorscheme mintchoc-contrast
 "colorscheme molocayo
 "colorscheme monzo-contrast
+" colorscheme moonlight
 "colorscheme mud-contrast
 "colorscheme newton-contrast
 "colorscheme otakon-contrast
@@ -123,6 +124,7 @@ colorscheme tokyodark
 "colorscheme userscape-contrast
 "colorscheme vegetable-contrast
 "colorscheme violaceus
+" colorscheme vn-night
 "colorscheme warlock-contrast
 "colorscheme waste
 "colorscheme wonbat256mod
