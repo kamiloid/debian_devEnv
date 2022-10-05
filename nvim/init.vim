@@ -83,6 +83,7 @@ let NERDTreeWinPos=1
 "colorscheme isotope-contrast
 "colorscheme joker-contrast
 "colorscheme jumper-contrast
+" colorscheme kanagawa
 "colorscheme kiwi-contrast
 "colorscheme laravel-contrast
 "colorscheme legacy-contrast
@@ -114,7 +115,8 @@ let NERDTreeWinPos=1
 "colorscheme storm-contrast
 "colorscheme tetra-contrast
 "colorscheme tickle-contrast
-colorscheme tokyonight
+colorscheme tokyodark
+" colorscheme tokyonight
 "colorscheme tonic-contrast
 "colorscheme turnip
 "colorscheme two-firewatch
