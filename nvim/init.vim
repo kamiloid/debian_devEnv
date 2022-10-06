@@ -234,30 +234,14 @@ vmap <C-b> <ESC>:NERDTreeToggle<CR>
 imap <C-A-b> <ESC>:NvimTreeToggle<CR>
 nmap <C-A-b> <ESC>:NvimTreeToggle<CR>
 vmap <C-A-b> <ESC>:NvimTreeToggle<CR>
-"--SHOW OPENED FIES
-imap <C-A-l> <ESC>:buffer 
-nmap <C-A-l> <ESC>:buffer 
-vmap <C-A-l> <ESC>:buffer 
 "--OPEN MINIMAP
 imap <C-A-u> <ESC>:MinimapToggle<CR>
 nmap <C-A-u> <ESC>:MinimapToggle<CR>
 vmap <C-A-u> <ESC>:MinimapToggle<CR>
-"--SHOW EDITABLE FILE SYSTEM
-imap <C-A-e> <ESC>:edit 
-nmap <C-A-e> <ESC>:edit 
-vmap <C-A-e> <ESC>:edit 
 "--CLOSE OPENED FIES
 imap <C-A-d> <ESC>:bdelete 
 nmap <C-A-d> <ESC>:bdelete 
-vmap <C-A-d> <ESC>:bdelete  
-"--MOVE UP 5 POINTS
-" imap <S-UP> <ESC>:-2<CR>
-" nmap <S-UP> <ESC>:-2<CR>
-" vmap <S-UP> <ESC>:-2<CR>
-" "--MOVE DOWN 5 POINTS
-" imap <S-DOWN> <ESC>:+2<CR>
-" nmap <S-DOWN> <ESC>:+2<CR>
-" vmap <S-DOWN> <ESC>:+2<CR>
+vmap <C-A-d> <ESC>:bdelete 
 "--MOVE UP 5 POINTS
 imap <S-UP> <ESC>:-5<CR>
 nmap <S-UP> <ESC>:-5<CR>
