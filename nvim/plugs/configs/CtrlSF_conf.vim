@@ -33,3 +33,4 @@ let g:ctrlsf_position = 'bottom'
 "position: bottom_inside - bottom_outside - top_inside - top_outside
 let g:ctrlsf_compact_position = 'bottom_inside'
 let g:ctrlsf_winsize = '30%'
+

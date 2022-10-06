@@ -149,12 +149,16 @@ endif
 
 "COMMANDS///////////////////////////////
 command! EXP :Explorer
-command! FT :FloatermNew! --width=0.9 --height=0.9
+command! KFloatTerminal :FloatermNew! --width=0.9 --height=0.9
 command! CB :Clap buffers
 command! CF :Clap files
 command! CC :Clap colors
-command! CY :Clap yanks
-command! CM :CommentToggle
+command! KYanks :Clap yanks
+command! KComment :CommentToggle
+command! KPathFiles :Files
+command! KTerminalLeft :vsplit | :terminal
+command! KTerminalDown :split | :terminal
+command! KMiniMap :MinimapToggle
 
 "KEY-BINDING////////////////////////////
 "--IDENTATION////////////////
@@ -223,9 +227,9 @@ imap <A-l> <ESC>:set background=light<CR>
 nmap <A-l> <ESC>:set background=light<CR>
 vmap <A-l> <ESC>:set background=light<CR>
 "--DIR FILES
-imap <C-f> <ESC>:Files<CR>
-nmap <C-f> <ESC>:Files<CR>
-vmap <C-f> <ESC>:Files<CR>
+imap <A-f> <ESC>:Files<CR>
+nmap <A-f> <ESC>:Files<CR>
+vmap <A-f> <ESC>:Files<CR>
 "--NERD TREE TOGGLE
 imap <C-b> <ESC>:NERDTreeToggle<CR>
 nmap <C-b> <ESC>:NERDTreeToggle<CR>
@@ -235,9 +239,9 @@ imap <C-A-b> <ESC>:NvimTreeToggle<CR>
 nmap <C-A-b> <ESC>:NvimTreeToggle<CR>
 vmap <C-A-b> <ESC>:NvimTreeToggle<CR>
 "--OPEN MINIMAP
-imap <C-A-u> <ESC>:MinimapToggle<CR>
-nmap <C-A-u> <ESC>:MinimapToggle<CR>
-vmap <C-A-u> <ESC>:MinimapToggle<CR>
+imap <leader>mm <ESC>:MinimapToggle<CR>
+nmap <leader>mm <ESC>:MinimapToggle<CR>
+vmap <leader>mm <ESC>:MinimapToggle<CR>
 "--CLOSE OPENED FIES
 imap <C-A-d> <ESC>:bdelete 
 nmap <C-A-d> <ESC>:bdelete 

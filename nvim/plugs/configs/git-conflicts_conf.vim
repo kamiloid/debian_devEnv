@@ -10,3 +10,8 @@ require('git-conflict').setup {
 }
 
 EOF
+
+command! KGitConflicts :GitConflictListQf
+command! KGitConflictsRefresh :GitConflictRefresh
+command! KGitNextConflict :GitConflictNextConflict
+command! KGitPrevConflict :GitConflictPrevConflict

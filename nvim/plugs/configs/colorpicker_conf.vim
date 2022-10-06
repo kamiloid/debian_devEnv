@@ -28,8 +28,6 @@ vim.cmd([[hi FloatBorder guibg=NONE]])
 
 EOF
 
-command! CP :PickColor
-command! CPI :PickColorInsert
-
-
+command! KColorPicker :PickColor
+command! KColorPickerInsert :PickColorInsert
 

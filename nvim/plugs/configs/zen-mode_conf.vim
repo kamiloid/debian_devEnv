@@ -51,6 +51,8 @@ require("zen-mode").setup
 
 EOF
 
+command! KZenMode :ZenMode
+
 imap <leader>zm <ESC><leader>s :ZenMode<CR>
 nmap <leader>zm <ESC><leader>s :ZenMode<CR>
 vmap <leader>zm <ESC><leader>s :ZenMode<CR>

@@ -6,9 +6,10 @@ require("twilight").setup{}
 EOF
 
 
-command! TE :TwilightEnable
-command! TD :TwilightDisable
+command! KTwilight :Twilight
+command! KTwilightEnable :TwilightEnable
+command! KTwilightDisable :TwilightDisable
 
-imap <A-z> <ESC>:Twilight<CR>
-nmap <A-z> <ESC>:Twilight<CR>
-vmap <A-z> <ESC>:Twilight<CR>
+imap <leader>zz <ESC>:Twilight<CR>
+nmap <leader>zz <ESC>:Twilight<CR>
+vmap <leader>zz <ESC>:Twilight<CR>

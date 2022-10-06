@@ -50,6 +50,8 @@ require("trouble").setup {
 
 EOF
 
+command! KDiagnostics2 :TroubleToggle
+
 imap <leader>t <ESC>:TroubleToggle<CR>
 nmap <leader>t <ESC>:TroubleToggle<CR>
 vmap <leader>t <ESC>:TroubleToggle<CR>
