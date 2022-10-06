@@ -316,4 +316,4 @@ end
 EOF
 
 "////AUTOCOMPLETE MENU COLOR
-highlight Pmenu ctermbg=gray guibg=white gui=bold
+highlight Pmenu ctermbg=gray guibg=#10414d gui=bold
