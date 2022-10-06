@@ -314,3 +314,6 @@ function Kclose_buffers()
 end
 
 EOF
+
+"////AUTOCOMPLETE MENU COLOR
+highlight Pmenu ctermbg=gray guibg=white gui=bold
