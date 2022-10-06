@@ -35,6 +35,7 @@ require("telescope").setup{
 		lsp_references = {theme = "ivy"},
 		lsp_document_symbols = {theme = "ivy"},
 		diagnostics = {theme = "ivy"},
+		treesitter = {theme = "ivy"},
 		help_tags = { theme = "ivy", layout_config = {vertical = {width = 0.9}}}
 	},
 	extensions ={}
@@ -51,6 +52,7 @@ command! KTerminalCmds :Telescope man_pages
 command! KOldFiles :Telescope oldfiles
 command! KHelp :Telescope help_tags
 command! KDiagnostics :Telescope diagnostics
+command! KSymbols :Telescope treesitter
 
 ""--KEY MAPS
 imap <leader>sp <ESC>:Telescope spell_suggest<CR>
