@@ -1,6 +1,7 @@
 call plug#begin()
 
 "--SERVER LANGUAJES & COMPLETION
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -63,6 +64,7 @@ call plug#end()
 
 "------- PLUGINS CONFIG -------------------------------
 "------------------------------------------------------
+source $HOME/.config/nvim/plugs/configs/treesitter_conf.vim
 source $HOME/.config/nvim/plugs/configs/schemes_conf.vim
 source $HOME/.config/nvim/plugs/configs/lualine_conf.vim
 source $HOME/.config/nvim/plugs/configs/barbar_conf.vim
