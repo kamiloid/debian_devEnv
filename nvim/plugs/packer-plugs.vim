@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
 	use 'matbme/JABS.nvim'
 
 	use {"folke/zen-mode.nvim"}
-	use 'm4xshen/autoclose.nvim'
+--	use 'm4xshen/autoclose.nvim'
 	use {'akinsho/git-conflict.nvim'}
 	--COLORSCHEMES
 	use "rebelot/kanagawa.nvim"

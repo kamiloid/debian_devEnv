@@ -314,4 +314,3 @@ function Kclose_buffers()
 end
 
 EOF
-
