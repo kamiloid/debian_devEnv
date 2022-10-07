@@ -57,7 +57,7 @@ command! KSymbols :Telescope treesitter
 command! KSearchText :Telescope live_grep
 
 " command! KColorSchemes :lua require('plugs.configs.telescopeExtras.colorscheme_picker').run()
-command! KColorSchemes :luafile ./plugs/configs/telescopeExtras/colorscheme_picker.lua
+command! KColorSchemes :luafile $HOME/.config/nvim/plugs/configs/telescopeExtras/colorscheme_picker.lua
 
 ""--KEY MAPS
 imap <leader>sp <ESC>:Telescope spell_suggest<CR>
