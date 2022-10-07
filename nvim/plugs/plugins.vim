@@ -20,6 +20,7 @@ Plug 'ray-x/lsp_signature.nvim'
 " https://github.com/ray-x/navigator.lua
 
 "--UTILITIES
+Plug 'famiu/nvim-reload'
 Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-clap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
