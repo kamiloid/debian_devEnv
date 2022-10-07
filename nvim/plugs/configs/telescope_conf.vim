@@ -36,6 +36,7 @@ require("telescope").setup{
 		lsp_document_symbols = {theme = "ivy"},
 		diagnostics = {theme = "ivy"},
 		treesitter = {theme = "ivy"},
+		live_grep = {theme = "ivy"},
 		help_tags = { theme = "ivy", layout_config = {vertical = {width = 0.9}}}
 	},
 	extensions ={}
@@ -53,6 +54,10 @@ command! KOldFiles :Telescope oldfiles
 command! KHelp :Telescope help_tags
 command! KDiagnostics :Telescope diagnostics
 command! KSymbols :Telescope treesitter
+command! KSearchText :Telescope live_grep
+
+" command! KColorSchemes :lua require('plugs.configs.telescopeExtras.colorscheme_picker').run()
+command! KColorSchemes :luafile ./plugs/configs/telescopeExtras/colorscheme_picker.lua
 
 ""--KEY MAPS
 imap <leader>sp <ESC>:Telescope spell_suggest<CR>
@@ -70,4 +75,8 @@ vmap <C-f> <ESC>:Telescope find_files<CR>
 imap <leader>ff <ESC>:Telescope find_files<CR>
 nmap <leader>ff <ESC>:Telescope find_files<CR>
 vmap <leader>ff <ESC>:Telescope find_files<CR>
+
+imap <leader>st <ESC>:Telescope live_grep<CR>
+nmap <leader>st <ESC>:Telescope live_grep<CR>
+vmap <leader>st <ESC>:Telescope live_grep<CR>
 

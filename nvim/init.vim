@@ -43,96 +43,6 @@ source $HOME/.config/nvim/plugs/packer-plugs.vim
 
 let NERDTreeWinPos=1
 
-"COLORS & COLORSCHEME//////////////////
-"colorscheme challenger_depp
-"colorscheme ayu
-"colorscheme chocolate
-"colorscheme chocolate-contrast
-"colorscheme codecourse
-"colorscheme codecourse-contrast
-"colorscheme coffee
-"colorscheme coffee-contrast
-"colorscheme comrade-contrast
-"colorscheme crackpot-contrast
-"colorscheme crisp
-"colorscheme gruvbox
-"colorscheme dare-contrast
-"colorscheme darkside
-"colorscheme deep-space
-"colorscheme downpour-contrast
-"colorscheme earthsong
-"colorscheme earthsong-contrast
-"colorscheme flattened_dark
-"colorscheme focuspoint
-"colorscheme fooder
-"colorscheme fooder-contrast
-"colorscheme frantic-contrast
-"colorscheme frontier
-"colorscheme frontier-contrast
-"colorscheme github-contrast
-"colorscheme glance
-"colorscheme glance-contrast
-"colorscheme gloom
-"colorscheme gloom-contrast
-"colorscheme glowfish
-"colorscheme glowfish-contrast
-"colorscheme gotham
-"colorscheme horizon-contrast
-"colorscheme hub-contrast
-"colorscheme iceberg
-"colorscheme isotope-contrast
-"colorscheme joker-contrast
-"colorscheme jumper-contrast
-" colorscheme kanagawa
-"colorscheme kiwi-contrast
-"colorscheme laravel-contrast
-"colorscheme legacy-contrast
-"colorscheme lichen-contrast
-"colorscheme mauve-contrast
-"colorscheme mintchoc-contrast
-"colorscheme molocayo
-"colorscheme monzo-contrast
-" colorscheme moonlight
-"colorscheme mud-contrast
-"colorscheme newton-contrast
-"colorscheme otakon-contrast
-"colorscheme overflow-contrast
-"colorscheme peacock-contrast
-"colorscheme peacocks-in-space-contrast
-"colorscheme penitent-contrast
-"colorscheme piggy-contrast
-"colorscheme potpourri-contrast
-"colorscheme prime-contrast
-"colorscheme rainbow-contrast
-"colorscheme rebellion
-"colorscheme rebellion-contrast
-"colorscheme scorch-contrast
-"colorscheme slime-contrast
-"colorscheme solarized8-slow
-"colorscheme sonokay
-"colorscheme spitfire-contrast
-"colorscheme stark-contrast
-"colorscheme storm
-"colorscheme storm-contrast
-"colorscheme tetra-contrast
-"colorscheme tickle-contrast
-colorscheme tokyodark
-" colorscheme tokyonight
-"colorscheme tonic-contrast
-"colorscheme turnip
-"colorscheme two-firewatch
-"colorscheme userscape-contrast
-"colorscheme vegetable-contrast
-"colorscheme violaceus
-" colorscheme vn-night
-"colorscheme warlock-contrast
-"colorscheme waste
-"colorscheme wonbat256mod
-"colorscheme yitzchok-contrast
-"colorscheme yule
-"colorscheme yule-contrast
-"colorscheme zacks
-"colorscheme zacks-contrast
 set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
@@ -146,6 +56,8 @@ else
         set termguicolors
     endif
 endif
+
+source $HOME/.config/nvim/setup/colorscheme.vim
 
 "COMMANDS///////////////////////////////
 command! EXP :Explorer
@@ -316,4 +228,9 @@ end
 EOF
 
 "////AUTOCOMPLETE MENU COLOR
+" You can use the following highlight groups:
+" Pmenu – normal item
+" PmenuSel – selected item
+" PmenuSbar – scrollbar
+" PmenuThumb – thumb of the scrollbar
 highlight Pmenu ctermbg=gray guibg=#10414d gui=bold
