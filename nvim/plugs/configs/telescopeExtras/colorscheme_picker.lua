@@ -67,3 +67,4 @@ local options = {
 local dropdown = themes.get_dropdown(style)
 local colors = pickers.new(dropdown, options)
 colors:find()
+vim.cmd('colorscheme'..colorschemes_buffer[1])

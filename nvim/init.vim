@@ -43,22 +43,7 @@ source $HOME/.config/nvim/plugs/packer-plugs.vim
 
 let NERDTreeWinPos=1
 
-set background=dark
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-
-" True color if available
-let term_program=$TERM_PROGRAM
-" Check for conflicts with Apple Terminal app
-if term_program !=? 'Apple_Terminal'
-    set termguicolors
-else
-    if $TERM !=? 'xterm-256color'
-        set termguicolors
-    endif
-endif
-
 source $HOME/.config/nvim/setup/colorscheme.vim
-
 "COMMANDS///////////////////////////////
 command! EXP :Explorer
 command! KFloatTerminal :FloatermNew! --width=0.9 --height=0.9
@@ -234,3 +219,19 @@ EOF
 " PmenuSbar – scrollbar
 " PmenuThumb – thumb of the scrollbar
 highlight Pmenu ctermbg=gray guibg=#10414d gui=bold
+
+"////COLOR CONFIGURATION
+set background=dark
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" True color if available
+let term_program=$TERM_PROGRAM
+" Check for conflicts with Apple Terminal app
+if term_program !=? 'Apple_Terminal'
+    set termguicolors
+else
+    if $TERM !=? 'xterm-256color'
+        set termguicolors
+    endif
+endif
+set t_Co=256
