@@ -16,6 +16,7 @@ require'nvim-treesitter.configs'.setup {
   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
+  indent = {enable = true},
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
@@ -27,7 +28,7 @@ require'nvim-treesitter.configs'.setup {
     disable = { },
     -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
     disable = function(lang, buf)
-        local max_filesize = 100 * 1024 -- 100 KB
+        local max_filesize = 300 * 1024 -- 100 KB
         local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
         if ok and stats and stats.size > max_filesize then
             return true
@@ -43,3 +44,9 @@ require'nvim-treesitter.configs'.setup {
 }
 
 EOF
+
+command! KHighlight :TSEnable highlight
+
+imap <leader>hi <ESC>:KHighlight<CR>a
+nmap <leader>hi <ESC>:KHighlight<CR>
+vmap <leader>hi <ESC>:KHighlight<CR>

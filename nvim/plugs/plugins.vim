@@ -33,7 +33,6 @@ Plug 'folke/twilight.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'sunjon/shade.nvim'
 Plug 'wfxr/minimap.vim'
-" Plug 'wstacruz/vim-closer'
 
 "--Multiple cursors
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
