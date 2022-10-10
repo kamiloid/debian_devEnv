@@ -43,7 +43,6 @@ source $HOME/.config/nvim/plugs/packer-plugs.vim
 
 let NERDTreeWinPos=1
 
-source $HOME/.config/nvim/setup/colorscheme.vim
 "COMMANDS///////////////////////////////
 command! EXP :Explorer
 command! KFloatTerminal :FloatermNew! --width=0.9 --height=0.9
@@ -221,7 +220,6 @@ EOF
 highlight Pmenu ctermbg=gray guibg=#10414d gui=bold
 
 "////COLOR CONFIGURATION
-set background=dark
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " True color if available
@@ -235,3 +233,5 @@ else
     endif
 endif
 set t_Co=256
+source $HOME/.config/nvim/setup/colorscheme.vim
+set background=dark

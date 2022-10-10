@@ -16,6 +16,8 @@ https://www.chrisatmachine.com/blog/category/neovim/27-native-lsp
 
 LSP servers list:
 https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+type LSP libs and bins in bashrc or zshrc:
+export PATH="${HOME}/.config/lsp/lua-language-server/bin:${HOME}/.config/lsp/lua_lib:${HOME}/.config/lsp/lua_lib/includes:${PATH}"
 
 Basic settings reference:
 https://dev.to/elvessousa/my-basic-neovim-setup-253l
