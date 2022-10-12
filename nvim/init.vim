@@ -1,5 +1,5 @@
 "EDITOR PROPS////////////////////////////
-set number
+set number relativenumber
 set autoindent
 set tabstop=4
 set softtabstop=4
@@ -54,6 +54,7 @@ command! KComment :CommentToggle
 command! KPathFiles :Files
 command! KTerminalLeft :vsplit | :terminal
 command! KTerminalDown :split | :terminal
+command! KTerminal :terminal
 command! KMiniMap :MinimapToggle
 
 "KEY-BINDING////////////////////////////
@@ -65,6 +66,14 @@ vmap <TAB> :><CR>
 imap <S-TAB> <ESC>:<<CR>A
 nmap <S-TAB> <ESC>:<<CR>
 vmap <S-TAB> :<<CR>
+"--NEXT/PREV BUFFER//////////
+imap <leader><TAB> <ESC>:BufferNext<CR>
+nmap <leader><TAB> <ESC>:BufferNext<CR>
+vmap <leader><TAB> <ESC>:BufferNext<CR>
+
+imap <leader><S-TAB> <ESC>:BufferPrevious<CR>
+nmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
+vmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
 "--SAVE FILE///////////////
 imap <C-s> <ESC>:w!<CR>
 nmap <C-s> <ESC>:w!<CR>
@@ -196,16 +205,13 @@ function Kclose_buffers()
 	if count > 1 then
 		vim.cmd(":NERDTreeClose")
  		vim.cmd(":NvimTreeClose")
-		vim.api.nvim_buf_delete(current_buffer, { force })
+		vim.cmd(":BufferDelete")
 		return
 	end
 	if name ~= '' then
 		vim.api.nvim_buf_delete(0, { force })
 		vim.cmd(":NvimTreeOpen")
-		--vim.cmd(":Telescope file_browser")
-		--vim.cmd(":NERDTreeFocus")
 		--vim.cmd(":Startify")
-		--vim.cmd(":Explore")
 	end
 end
 
