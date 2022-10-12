@@ -25,13 +25,13 @@ Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-clap'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
+" Plug 'preservim/nerdtree'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'gelguy/wilder.nvim'
 Plug 'https://github.com/yamatsum/nvim-cursorline'
 Plug 'folke/twilight.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'sunjon/shade.nvim'
+" Plug 'sunjon/shade.nvim'
 Plug 'wfxr/minimap.vim'
 
 "--Multiple cursors
@@ -80,7 +80,7 @@ source $HOME/.config/nvim/plugs/configs/indentLines_config.vim
 " source $HOME/.config/nvim/plugs/configs/lspUtils_conf.vim
 source $HOME/.config/nvim/plugs/configs/lspKind_conf.vim
 source $HOME/.config/nvim/plugs/configs/lspSignature_conf.vim
-source $HOME/.config/nvim/plugs/configs/shade_conf.vim
+" source $HOME/.config/nvim/plugs/configs/shade_conf.vim
 source $HOME/.config/nvim/plugs/configs/CtrlSF_conf.vim
 source $HOME/.config/nvim/plugs/configs/multi-cursor_conf.vim
 source $HOME/.config/nvim/plugs/configs/trouble_conf.vim

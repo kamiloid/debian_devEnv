@@ -41,8 +41,6 @@ let g:netrw_localcopydircmd='cp -r'
 source $HOME/.config/nvim/plugs/plugins.vim
 source $HOME/.config/nvim/plugs/packer-plugs.vim
 
-let NERDTreeWinPos=1
-
 "COMMANDS///////////////////////////////
 command! EXP :Explorer
 command! KFloatTerminal :FloatermNew! --width=0.9 --height=0.9
@@ -83,10 +81,15 @@ imap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 nmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 vmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 "--QUIT////////////////////
-imap <C-q> <ESC>:NERDTreeClose<ESC>:NvimTreeClose<ESC>:q!<CR>
-nmap <C-q> <ESC>:NERDTreeClose<ESC>:NvimTreeClose<ESC>:q!<CR>
-vmap <C-q> <ESC>:NERDTreeClose<ESC>:NvimTreeClose<ESC>:q!<CR>
+" imap <C-q> <ESC>:q!<CR>
+" nmap <C-q> <ESC>:q!<CR>
+" vmap <C-q> <ESC>:q!<CR>
+
+imap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
+nmap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
+vmap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
 "--CLOSE BUFFERS UNTIL EXPLORER//////////////////
+"--WHILE I GET THE HABIT TO USE C-W AS SUBLIME TEXT
 imap <A-q> <ESC>:lua Kclose_buffers()<CR>
 nmap <A-q> <ESC>:lua Kclose_buffers()<CR>
 vmap <A-q> <ESC>:lua Kclose_buffers()<CR>
@@ -135,10 +138,6 @@ vmap <A-l> <ESC>:set background=light<CR>
 imap <A-f> <ESC>:Files<CR>
 nmap <A-f> <ESC>:Files<CR>
 vmap <A-f> <ESC>:Files<CR>
-"--NERD TREE TOGGLE
-imap <C-b> <ESC>:NERDTreeToggle<CR>
-nmap <C-b> <ESC>:NERDTreeToggle<CR>
-vmap <C-b> <ESC>:NERDTreeToggle<CR>
 "--NVIMTREE_TOGGLE
 imap <C-A-b> <ESC>:NvimTreeToggle<CR>
 nmap <C-A-b> <ESC>:NvimTreeToggle<CR>
@@ -183,12 +182,6 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : compe#confi
 
 lua << EOF
 
-function Kclose_editor()
-	vim.cmd(":NERDTreeClose")
-	vim.cmd(":NvimTreeClose")
-	vim.cmd(":q!")
-end
-
 function Kbuffer_length()
 	local count = 0
 	local buffers = vim.fn.bufnr('$')
@@ -198,14 +191,21 @@ function Kbuffer_length()
 	return count;
 end
 
+function Kclose_all_buffers()
+	local count = Kbuffer_length()
+	--vim.cmd("KShadeOff")
+	for b = 1, count do
+		vim.cmd("BufferDelete!")
+		vim.cmd("q!")
+	end
+end
+
 function Kclose_buffers()
 	local current_buffer = vim.api.nvim_get_current_buf()
 	local name = vim.api.nvim_buf_get_name(current_buffer)
 	local count = Kbuffer_length()
 	if count > 1 then
-		vim.cmd(":NERDTreeClose")
- 		vim.cmd(":NvimTreeClose")
-		vim.cmd(":BufferDelete")
+		vim.cmd(":BufferDelete!")
 		return
 	end
 	if name ~= '' then
