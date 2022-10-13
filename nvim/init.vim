@@ -81,10 +81,6 @@ imap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 nmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 vmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 "--QUIT////////////////////
-" imap <C-q> <ESC>:q!<CR>
-" nmap <C-q> <ESC>:q!<CR>
-" vmap <C-q> <ESC>:q!<CR>
-
 imap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
 nmap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
 vmap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
@@ -125,7 +121,6 @@ vmap <leader><UP> <ESC>:resize +5<CR>
 imap <leader><DOWN> <ESC>:resize -5<CR>
 nmap <leader><DOWN> <ESC>:resize -5<CR>
 vmap <leader><DOWN> <ESC>:resize -5<CR>
-
 "--TOGGLE DARK COLOR SCHEME
 imap <A-k> <ESC>:set background=dark<CR>
 nmap <A-k> <ESC>:set background=dark<CR>
@@ -139,6 +134,9 @@ imap <A-f> <ESC>:Files<CR>
 nmap <A-f> <ESC>:Files<CR>
 vmap <A-f> <ESC>:Files<CR>
 "--NVIMTREE_TOGGLE
+imap <C-b> <ESC>:NvimTreeToggle<CR>
+nmap <C-b> <ESC>:NvimTreeToggle<CR>
+vmap <C-b> <ESC>:NvimTreeToggle<CR>
 imap <C-A-b> <ESC>:NvimTreeToggle<CR>
 nmap <C-A-b> <ESC>:NvimTreeToggle<CR>
 vmap <C-A-b> <ESC>:NvimTreeToggle<CR>
