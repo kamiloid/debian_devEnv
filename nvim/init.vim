@@ -44,10 +44,6 @@ source $HOME/.config/nvim/plugs/packer-plugs.vim
 "COMMANDS///////////////////////////////
 command! EXP :Explorer
 command! KFloatTerminal :FloatermNew! --width=0.9 --height=0.9
-command! CB :Clap buffers
-command! CF :Clap files
-command! CC :Clap colors
-command! KYanks :Clap yanks
 command! KComment :CommentToggle
 command! KPathFiles :Files
 command! KTerminalLeft :vsplit | :terminal
@@ -191,7 +187,7 @@ end
 
 function Kclose_all_buffers()
 	local count = Kbuffer_length()
-	--vim.cmd("KShadeOff")
+	vim.cmd("KShadeOff")
 	for b = 1, count do
 		vim.cmd("BufferDelete!")
 		vim.cmd("q!")

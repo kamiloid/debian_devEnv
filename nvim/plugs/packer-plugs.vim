@@ -33,6 +33,11 @@ return require('packer').startup(function(use)
 	use {'akinsho/git-conflict.nvim'}
 	--COLORSCHEMES
 	use "rebelot/kanagawa.nvim"
+	use "AckslD/nvim-neoclip.lua"
+	use "cljoly/telescope-repo.nvim"
+	use { "LinArcX/telescope-ports.nvim" }
+	use "nvim-telescope/telescope-packer.nvim"
+	use "nvim-telescope/telescope-project.nvim"
 end)
 
 
@@ -47,6 +52,7 @@ source $HOME/.config/nvim/plugs/configs/colorpicker_conf.vim
 source $HOME/.config/nvim/plugs/configs/JABS_conf.vim
 source $HOME/.config/nvim/plugs/configs/zen-mode_conf.vim
 source $HOME/.config/nvim/plugs/configs/git-conflicts_conf.vim
+source $HOME/.config/nvim/plugs/configs/neoclip_conf.vim
 
 lua require('nvim_comment').setup()
 

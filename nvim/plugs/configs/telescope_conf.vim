@@ -39,8 +39,74 @@ require("telescope").setup{
 		live_grep = {theme = "ivy"},
 		help_tags = { theme = "ivy", layout_config = {vertical = {width = 0.9}}}
 	},
-	extensions ={}
+	extensions = {
+    repo = {
+      list = {
+        fd_opts = {
+          "--no-ignore-vcs",
+        },
+        search_dirs = {
+          "~/my_projects",
+        },
+      },
+    },
+	packer = {
+		theme = "ivy",
+		layout_config = {
+			height = .5
+		}
+	}
+  },
 }
+
+function load_telescope_repo()
+	require('telescope').load_extension 'repo'
+	vim.cmd('Telescope repo')
+end
+
+function load_telescope_ports()
+	require('telescope').load_extension('ports')
+	vim.cmd('Telescope ports')
+	-- mapping: C-k kill processes
+end
+
+function load_telescope_packer()
+	require("telescope").load_extension "packer"
+	require('telescope').extensions.packer.packer(opts)
+	vim.cmd('Telescope packer')
+	-- <C-o>	Open online repository
+end
+
+function load_telescope_project()
+	require'telescope'.load_extension('project')
+	vim.cmd('Telescope project')
+
+	--Default mappings (normal mode):
+	--Key	Description
+	--d	delete currently selected project
+	--r	rename currently selected project
+	--c	create a project*
+	--s	search inside files within your project
+	--b	browse inside files within your project
+	--w	change to the selected project's directory without opening it
+	--R	find a recently opened file within your project
+	--f	find a file within your project (same as <CR>)
+
+	--Default mappings (insert mode):
+	--Key	Description
+	--<c-d>	delete currently selected project
+	--<c-v>	rename currently selected project
+	--<c-a>	create a project*
+	--<c-s>	search inside files within your project
+	--<c-b>	browse inside files within your project
+	--<c-l>	change to the selected project's directory without opening it
+	--<c-r>	find a recently opened file within your project
+	--<c-f>	find a file within your project (same as <CR>)
+
+	--Workspace mappings (insert mode):
+	--Key	Description
+	--<c-w>	change workspace
+end
 
 EOF
 
@@ -55,6 +121,10 @@ command! KHelp :Telescope help_tags
 command! KDiagnostics :Telescope diagnostics
 command! KSymbols :Telescope treesitter
 command! KSearchText :Telescope live_grep
+command! KGitRepos :lua load_telescope_repo()
+command! KPorts :lua load_telescope_ports()
+command! KPacker :lua load_telescope_packer()
+command! KProject :lua load_telescope_project()
 
 " command! KColorSchemes :lua require('plugs.configs.telescopeExtras.colorscheme_picker').run()
 command! KColorSchemes :luafile $HOME/.config/nvim/plugs/configs/telescopeExtras/colorscheme_picker.lua

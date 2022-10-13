@@ -1,19 +1,19 @@
 lua << EOF
 
-local shade = require'plugs.configs.myShade'
-shade.setup({
+require'shade'.setup({
   overlay_opacity = 50,
   opacity_step = 1,
+  keys = {
+    brightness_up    = '<C-Up>',
+    brightness_down  = '<C-Down>',
+    toggle           = '<Leader>s',
+  }
 })
 
-shade.toggle()
-function active_shade()
-	shade.on()
-end
+require'shade'.activate()
 
 EOF
 
-command! KShadeOn :lua require'plugs.configs.myShade'.on()
-command! KShadeOff :lua require'plugs.configs.myShade'.off()
+command! KShadeOn :lua require'shade'.activate()
+command! KShadeOff :lua require'shade'.deactivate()
 
-" lua active_shade()
