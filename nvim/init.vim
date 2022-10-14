@@ -205,7 +205,9 @@ function Kclose_buffers()
 	local count = Kbuffer_length()
 	if count > 1 then
 		--vim.cmd(":BufferDelete!")
+		vim.cmd("KShadeOff")
 		vim.cmd("BufferDelete")
+		vim.cmd("KShadeOn")
 		return
 	end
 	if name ~= '' then
