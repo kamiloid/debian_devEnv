@@ -24,7 +24,8 @@ require("nvim-tree").setup({
 			width = 50,
 			height = 30,
 			row = 100 - 1,
-			col = 200 - 1
+			col = 200 - 1,
+			zindex = 3000
 		}
 	},
   },
