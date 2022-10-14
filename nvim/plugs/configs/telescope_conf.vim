@@ -55,6 +55,26 @@ require("telescope").setup{
 		layout_config = {
 			height = .5
 		}
+	},
+	lsp_handlers = {
+		disable = {},
+		location = {
+			telescope = {},
+			no_results_message = 'No references found',
+		},
+		symbol = {
+			telescope = {},
+			no_results_message = 'No symbols found',
+		},
+		call_hierarchy = {
+			telescope = {},
+			no_results_message = 'No calls found',
+		},
+		code_action = {
+			telescope = {},
+			no_results_message = 'No code actions available',
+			prefix = '',
+		},
 	}
   },
 }
@@ -128,6 +148,7 @@ command! KProject :lua load_telescope_project()
 
 " command! KColorSchemes :lua require('plugs.configs.telescopeExtras.colorscheme_picker').run()
 command! KColorSchemes :luafile $HOME/.config/nvim/plugs/configs/telescopeExtras/colorscheme_picker.lua
+command! KTerminal :luafile $HOME/.config/nvim/plugs/configs/telescopeExtras/float_terminals.lua
 
 ""--KEY MAPS
 imap <leader>sp <ESC>:Telescope spell_suggest<CR>

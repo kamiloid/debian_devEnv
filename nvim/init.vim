@@ -43,12 +43,8 @@ source $HOME/.config/nvim/plugs/packer-plugs.vim
 
 "COMMANDS///////////////////////////////
 command! EXP :Explorer
-command! KFloatTerminal :FloatermNew! --width=0.9 --height=0.9
 command! KComment :CommentToggle
 command! KPathFiles :Files
-command! KTerminalLeft :vsplit | :terminal
-command! KTerminalDown :split | :terminal
-command! KTerminal :terminal
 command! KMiniMap :MinimapToggle
 
 "KEY-BINDING////////////////////////////
