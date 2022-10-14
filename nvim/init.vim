@@ -57,13 +57,20 @@ imap <S-TAB> <ESC>:<<CR>A
 nmap <S-TAB> <ESC>:<<CR>
 vmap <S-TAB> :<<CR>
 "--NEXT/PREV BUFFER//////////
-imap <leader><TAB> <ESC>:BufferNext<CR>
-nmap <leader><TAB> <ESC>:BufferNext<CR>
-vmap <leader><TAB> <ESC>:BufferNext<CR>
+" imap <leader><TAB> <ESC>:BufferNext<CR>
+" nmap <leader><TAB> <ESC>:BufferNext<CR>
+" vmap <leader><TAB> <ESC>:BufferNext<CR>
+"
+" imap <leader><S-TAB> <ESC>:BufferPrevious<CR>
+" nmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
+" vmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
+imap <leader><TAB> <ESC>:bnext<CR>
+nmap <leader><TAB> <ESC>:bnext<CR>
+vmap <leader><TAB> <ESC>:bnext<CR>
 
-imap <leader><S-TAB> <ESC>:BufferPrevious<CR>
-nmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
-vmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
+imap <leader><S-TAB> <ESC>:bprevious<CR>
+nmap <leader><S-TAB> <ESC>:bprevious<CR>
+vmap <leader><S-TAB> <ESC>:bprevious<CR>
 "--SAVE FILE///////////////
 imap <C-s> <ESC>:w!<CR>
 nmap <C-s> <ESC>:w!<CR>
@@ -72,6 +79,7 @@ vmap <C-s> <ESC>:w!<CR>
 imap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 nmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
 vmap <C-r> <ESC>:so $HOME/.config/nvim/init.vim<CR>
+
 "--QUIT////////////////////
 imap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
 nmap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
@@ -185,7 +193,8 @@ function Kclose_all_buffers()
 	local count = Kbuffer_length()
 	vim.cmd("KShadeOff")
 	for b = 1, count do
-		vim.cmd("BufferDelete!")
+		--vim.cmd("BufferDelete!")
+		vim.cmd("BufferDelete")
 		vim.cmd("q!")
 	end
 end
@@ -195,7 +204,8 @@ function Kclose_buffers()
 	local name = vim.api.nvim_buf_get_name(current_buffer)
 	local count = Kbuffer_length()
 	if count > 1 then
-		vim.cmd(":BufferDelete!")
+		--vim.cmd(":BufferDelete!")
+		vim.cmd("BufferDelete")
 		return
 	end
 	if name ~= '' then

@@ -19,7 +19,6 @@ autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 lua << EOF
 
 
-
 vim.o.completeopt = "menuone,noselect"
 
 require'compe'.setup {
@@ -56,6 +55,7 @@ require'compe'.setup {
     treesitter = true;
   };
 }
+
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)
 end

@@ -38,6 +38,8 @@ return require('packer').startup(function(use)
 	use { "LinArcX/telescope-ports.nvim" }
 	use "nvim-telescope/telescope-packer.nvim"
 	use "nvim-telescope/telescope-project.nvim"
+	--use 'nanozuki/tabby.nvim'
+	use 'kdheepak/tabline.nvim'
 end)
 
 
@@ -53,6 +55,8 @@ source $HOME/.config/nvim/plugs/configs/JABS_conf.vim
 source $HOME/.config/nvim/plugs/configs/zen-mode_conf.vim
 source $HOME/.config/nvim/plugs/configs/git-conflicts_conf.vim
 source $HOME/.config/nvim/plugs/configs/neoclip_conf.vim
+" source $HOME/.config/nvim/plugs/configs/tabby_conf.vim
+source $HOME/.config/nvim/plugs/configs/tabline_conf.vim
 
 lua require('nvim_comment').setup()
 

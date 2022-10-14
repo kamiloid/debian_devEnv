@@ -55,7 +55,7 @@ Plug 'nxvu699134/vn-night.nvim'
 
 "--STATUS BARS & TABBARS
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'romgrk/barbar.nvim'
+" Plug 'romgrk/barbar.nvim'
 
 "--ICOS
 Plug 'ryanoasis/vim-devicons'
@@ -68,7 +68,7 @@ call plug#end()
 source $HOME/.config/nvim/plugs/configs/treesitter_conf.vim
 source $HOME/.config/nvim/plugs/configs/schemes_conf.vim
 source $HOME/.config/nvim/plugs/configs/lualine_conf.vim
-source $HOME/.config/nvim/plugs/configs/barbar_conf.vim
+" source $HOME/.config/nvim/plugs/configs/barbar_conf.vim
 source $HOME/.config/nvim/plugs/configs/wilder_conf.vim
 source $HOME/.config/nvim/plugs/configs/LSPInstaller_conf.vim
 source $HOME/.config/nvim/plugs/configs/lsp_config.vim

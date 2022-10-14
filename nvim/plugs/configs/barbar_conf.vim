@@ -16,7 +16,7 @@ let bufferline.closable = v:true
 " Enables/disable clickable tabs
 "  - left-click: go to buffer
 "  - middle-click: delete buffer
-let bufferline.clickable = v:true
+let bufferline.clickable = v:false
 
 " Excludes buffers from the tabline
 "let bufferline.exclude_ft = ['javascript']
