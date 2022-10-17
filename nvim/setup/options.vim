@@ -72,5 +72,8 @@ set background=dark
 " PmenuSel – selected item
 " PmenuSbar – scrollbar
 " PmenuThumb – thumb of the scrollbar
-hi Pmenu guibg=DarkCyan guifg=Cyan
-hi PmenuSel guibg=cyan
+" hi Pmenu guibg=DarkCyan guifg=Cyan
+" hi PmenuSel guibg=cyan
+
+hi Pmenu guibg=#2b2b2b guifg=#666666
+hi PmenuSel guibg=#455861 guifg=#74a9c2

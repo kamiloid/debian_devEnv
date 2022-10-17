@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
 	use "nvim-telescope/telescope-project.nvim"
 	--use 'nanozuki/tabby.nvim'
 	use 'kdheepak/tabline.nvim'
+	use 'simrat39/symbols-outline.nvim'
 end)
 
 
@@ -57,6 +58,7 @@ source $HOME/.config/nvim/plugs/configs/git-conflicts_conf.vim
 source $HOME/.config/nvim/plugs/configs/neoclip_conf.vim
 " source $HOME/.config/nvim/plugs/configs/tabby_conf.vim
 source $HOME/.config/nvim/plugs/configs/tabline_conf.vim
+source $HOME/.config/nvim/plugs/configs/symbols-outline_conf.vim
 
 lua require('nvim_comment').setup()
 
