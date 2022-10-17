@@ -18,6 +18,7 @@ function Kclose_all_buffers()
 		vim.cmd("BufferDelete")
 		vim.cmd("q!")
 	end
+	vim.cmd("q!")
 end
 
 function Kclose_buffers()

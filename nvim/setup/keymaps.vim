@@ -1,7 +1,7 @@
 "KEY-BINDING////////////////////////////
 "--IDENTATION////////////////
 imap <TAB> <ESC>:><CR>A
-nmap <TAB> <ESC>:><CR>
+nnoremap <TAB> <ESC>:><CR>
 vmap <TAB> :><CR>
 "--BACK IDENTATION///////////
 imap <S-TAB> <ESC>:<<CR>A
@@ -15,6 +15,7 @@ vmap <S-TAB> :<<CR>
 " imap <leader><S-TAB> <ESC>:BufferPrevious<CR>
 " nmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
 " vmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
+
 imap <leader><TAB> <ESC>:bnext<CR>
 nmap <leader><TAB> <ESC>:bnext<CR>
 vmap <leader><TAB> <ESC>:bnext<CR>

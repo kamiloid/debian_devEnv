@@ -30,8 +30,10 @@ require('lualine').setup {
 --	theme = 'solarized_light',
 --	theme = 'Tomorrow',
 --	theme = 'vn-night'
-    component_separators = { left = '', right = ''},
-    section_separators = { left = '', right = ''},
+    --component_separators = { left = '', right = ''},
+    --section_separators = { left = '', right = ''},
+    component_separators = { left = '', right = ''},
+    section_separators = {left='', right=''},
     disabled_filetypes = {
       statusline = {},
       winbar = {},
