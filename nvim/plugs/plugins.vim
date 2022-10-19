@@ -11,6 +11,7 @@ Plug 'rmagatti/goto-preview'
 Plug 'https://github.com/onsails/lspkind.nvim'
 Plug 'folke/trouble.nvim'
 Plug 'ray-x/lsp_signature.nvim'
+
 " https://github.com/RishabhRD/nvim-lsputils
 " Plug 'RishabhRD/popfix'
 " Plug 'RishabhRD/nvim-lsputils'

@@ -24,6 +24,8 @@ sign define DiagnosticSignWarn text= texthl=DiagnosticSignWarn linehl= numhl=
 sign define DiagnosticSignInfo text= texthl=DiagnosticSignInfo linehl= numhl=
 sign define DiagnosticSignHint text= texthl=DiagnosticSignHint linehl= numhl=
 
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=350}
+
 "ITALIC FONTS/////////////////////////
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"

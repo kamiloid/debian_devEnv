@@ -64,7 +64,23 @@ local opts = {
 
 require("symbols-outline").setup(opts)
 
+local Ksymb_state = false
+function KSymbolsToogle()
+	if Ksymb_state then
+		Ksymb_state = false
+		vim.cmd('SymbolsOutlineClose')
+	else
+		Ksymb_state = true
+		vim.cmd('SymbolsOutlineOpen')
+	end
+end
+
 EOF
 
 command! KSymbols :SymbolsOutlineOpen
 command! KSymbolsClose :SymbolsOutlineClose
+command! KSymbolsToogle :lua KSymbolsToogle()
+
+imap <leader>SS <ESC>:SymbolsOutlineOpen<CR>
+nmap <leader>SS <ESC>:SymbolsOutlineOpen<CR>
+vmap <leader>SS <ESC>:SymbolsOutlineOpen<CR>

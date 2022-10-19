@@ -5,7 +5,8 @@ function Kbuffer_length()
 	local count = 0
 	local buffers = vim.fn.bufnr('$')
 	for b = 1, buffers do
-		count = count + vim.fn.buflisted(b)
+		local opened = vim.fn.buflisted(b)
+		count = count + opened
 	end
 	return count;
 end
