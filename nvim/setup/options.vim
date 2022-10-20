@@ -45,6 +45,7 @@ command! EXP :Explorer
 command! KComment :CommentToggle
 command! KPathFiles :Files
 command! KMiniMap :MinimapToggle
+command! KFormat :Format tab_width=4<CR>
 "///////////////////////////////////////////
 source $HOME/.config/nvim/setup/keymaps.vim
 "//////////////////////////////////////////

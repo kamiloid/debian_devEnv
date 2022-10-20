@@ -124,7 +124,14 @@ nmap <C-A-a> <ESC>G$v0gg
 imap <A-'> <ESC>:CommentToggle<CR>
 nmap <A-'> :CommentToggle<CR>
 vmap <A-'> :CommentToggle<CR>
+"--FORMMAT INDENTATION
+imap <silent><leader>fm <ESC>:KFormat<CR>
+nmap <silent><leader>fm <ESC>:KFormat<CR>
+vmap <silent><leader>fm <ESC>:KFormat<CR>
 
+imap <leader>kt <ESC>:FloatermKill<CR>
+nmap <leader>kt <ESC>:FloatermKill<CR>
+vmap <leader>kt <ESC>:FloatermKill<CR>
 "--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
 "REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete
 " inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"

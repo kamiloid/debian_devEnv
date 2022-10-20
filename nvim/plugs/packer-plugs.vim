@@ -6,6 +6,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use "lukas-reineke/lsp-format.nvim"
   use {
 	  "startup-nvim/startup.nvim",
 	  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
@@ -61,6 +62,4 @@ source $HOME/.config/nvim/plugs/configs/tabline_conf.vim
 source $HOME/.config/nvim/plugs/configs/symbols-outline_conf.vim
 
 lua require('nvim_comment').setup()
-
-
 

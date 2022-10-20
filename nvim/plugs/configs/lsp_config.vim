@@ -21,6 +21,11 @@ lua << EOF
 
 vim.o.completeopt = "menuone,noselect"
 
+require("lsp-format").setup {
+	yaml = { tab_width = 4 },
+	npm = { tab_width = 4 }
+}
+
 require'compe'.setup {
   enabled = true;
   autocomplete = true;
@@ -101,19 +106,21 @@ vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<CR>", "compe#confirm({ 'keys': '<CR>', 'select': v:true })", {expr = true})
 
 
-
+local on_attach = function(client)
+    require("lsp-format").on_attach(client)
+end
 
 
 --SERVERS
-require'lspconfig'.tsserver.setup{}
-require'lspconfig'.cssmodules_ls.setup{}
-require'lspconfig'.cssls.setup{}
-require'lspconfig'.html.setup{}
+require'lspconfig'.tsserver.setup{on_attach = on_attach}
+require'lspconfig'.cssmodules_ls.setup{on_attach = on_attach}
+require'lspconfig'.cssls.setup{on_attach = on_attach}
+require'lspconfig'.html.setup{on_attach = on_attach}
 --require'lspconfig'.gdscript.setup{}
-require'lspconfig'.eslint.setup{}
-require'lspconfig'.jsonls.setup{}
-require'lspconfig'.sqlls.setup{}
-require'lspconfig'.vimls.setup{}
+require'lspconfig'.eslint.setup{on_attach = on_attach}
+require'lspconfig'.jsonls.setup{on_attach = on_attach}
+require'lspconfig'.sqlls.setup{on_attach = on_attach}
+require'lspconfig'.vimls.setup{on_attach = on_attach}
 --require'lspconfig'.phpactor.setup{}
 
 require'lspconfig'.sumneko_lua.setup {
@@ -146,3 +153,4 @@ autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
 let g:LanguageClient_serverCommands = {
     \ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],
     \ }
+
