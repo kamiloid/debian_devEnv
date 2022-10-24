@@ -60,10 +60,20 @@ require 'jabs'.setup {
 
 EOF
 
+" Default Keymaps
+" Key 	Action
+" j or <Tab> 	navigate down
+" k or <S-Tab> 	navigate up
+" D 	close buffer
+" <CR> 	jump to buffer
+" s 	open buffer in horizontal split
+" v 	open buffer in vertical split
+" <S-p> 	open preview for buffer
+
 ""--COMMANDS
 command! KBuffersPreview :JABSOpen
 
 ""--KEY MAPS
-imap <leader>j <ESC>:BB<CR>
-nmap <leader>j <ESC>:BB<CR>
-vmap <leader>j <ESC>:BB<CR>
+imap <leader>j <ESC>:KBuffersPreview<CR>
+nmap <leader>j <ESC>:KBuffersPreview<CR>
+vmap <leader>j <ESC>:KBuffersPreview<CR>
