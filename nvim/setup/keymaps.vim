@@ -1,7 +1,7 @@
 "KEY-BINDING////////////////////////////
 "--IDENTATION////////////////
 imap <TAB> <ESC>:><CR>A
-nnoremap <TAB> <ESC>:><CR>
+nmap <TAB> <ESC>:><CR>
 vmap <TAB> :><CR>
 "--BACK IDENTATION///////////
 imap <S-TAB> <ESC>:<<CR>A
@@ -85,13 +85,6 @@ vmap <A-l> <ESC>:set background=light<CR>
 imap <A-f> <ESC>:Files<CR>
 nmap <A-f> <ESC>:Files<CR>
 vmap <A-f> <ESC>:Files<CR>
-"--NVIMTREE_TOGGLE
-imap <C-b> <ESC>:NvimTreeToggle<CR>
-nmap <C-b> <ESC>:NvimTreeToggle<CR>
-vmap <C-b> <ESC>:NvimTreeToggle<CR>
-imap <C-A-b> <ESC>:NvimTreeToggle<CR>
-nmap <C-A-b> <ESC>:NvimTreeToggle<CR>
-vmap <C-A-b> <ESC>:NvimTreeToggle<CR>
 "--OPEN MINIMAP
 imap <leader>mm <ESC>:MinimapToggle<CR>
 nmap <leader>mm <ESC>:MinimapToggle<CR>
@@ -132,6 +125,14 @@ vmap <silent><leader>fm <ESC>:KFormat<CR>
 imap <leader>kt <ESC>:FloatermKill<CR>
 nmap <leader>kt <ESC>:FloatermKill<CR>
 vmap <leader>kt <ESC>:FloatermKill<CR>
+
+imap <leader>] <ESC>:FloatermNext<CR>
+nmap <leader>] <ESC>:FloatermNext<CR>
+vmap <leader>] <ESC>:FloatermNext<CR>
+
+imap <leader>[ <ESC>:FloatermPrev<CR>
+nmap <leader>[ <ESC>:FloatermPrev<CR>
+vmap <leader>[ <ESC>:FloatermPrev<CR>
 "--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
 "REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete
 " inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"

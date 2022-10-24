@@ -51,3 +51,15 @@ require("nvim-tree").setup({
 })
 
 EOF
+
+nmap <leader>1 <ESC>:NvimTreeToggle<CR>
+nmap <leader>1 <ESC>:NvimTreeToggle<CR>
+nmap <leader>1 <ESC>:NvimTreeToggle<CR>
+
+imap <C-b> <ESC>:NvimTreeToggle<CR>
+nmap <C-b> <ESC>:NvimTreeToggle<CR>
+vmap <C-b> <ESC>:NvimTreeToggle<CR>
+
+imap <C-A-b> <ESC>:NvimTreeToggle<CR>
+nmap <C-A-b> <ESC>:NvimTreeToggle<CR>
+vmap <C-A-b> <ESC>:NvimTreeToggle<CR>

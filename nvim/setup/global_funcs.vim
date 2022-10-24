@@ -40,6 +40,11 @@ function Kclose_buffers()
 	end
 end
 
+function KSelect_prev_lines()
+	local i = vim.fn.line("'<")
+	local e = vim.fn.line("'>")
+end
+
 EOF
 
 

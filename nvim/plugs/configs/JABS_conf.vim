@@ -64,6 +64,6 @@ EOF
 command! KBuffersPreview :JABSOpen
 
 ""--KEY MAPS
-imap <leader>j <ESC>:BB<CR>
-nmap <leader>j <ESC>:BB<CR>
-vmap <leader>j <ESC>:BB<CR>
+imap <leader>j <ESC>:KBuffersPreview<CR>
+nmap <leader>j <ESC>:KBuffersPreview<CR>
+vmap <leader>j <ESC>:KBuffersPreview<CR>

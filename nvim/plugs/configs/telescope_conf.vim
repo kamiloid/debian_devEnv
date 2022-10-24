@@ -155,9 +155,17 @@ imap <leader>sp <ESC>:Telescope spell_suggest<CR>
 nmap <leader>sp <ESC>:Telescope spell_suggest<CR>
 vmap <leader>sp <ESC>:Telescope spell_suggest<CR>
 
+imap <leader>5 <ESC>:Telescope spell_suggest<CR>
+nmap <leader>5 <ESC>:Telescope spell_suggest<CR>
+vmap <leader>5 <ESC>:Telescope spell_suggest<CR>
+
 imap <C-A-l> <ESC>:Telescope buffers<CR>
 nmap <C-A-l> <ESC>:Telescope buffers<CR>
 vmap <C-A-l> <ESC>:Telescope buffers<CR>
+
+imap <leader>2 <ESC>:Telescope buffers<CR>
+nmap <leader>2 <ESC>:Telescope buffers<CR>
+vmap <leader>2 <ESC>:Telescope buffers<CR>
 
 imap <C-f> <ESC>:Telescope find_files<CR>
 nmap <C-f> <ESC>:Telescope find_files<CR>
@@ -167,7 +175,15 @@ imap <leader>ff <ESC>:Telescope find_files<CR>
 nmap <leader>ff <ESC>:Telescope find_files<CR>
 vmap <leader>ff <ESC>:Telescope find_files<CR>
 
+imap <leader>4 <ESC>:Telescope find_files<CR>
+nmap <leader>4 <ESC>:Telescope find_files<CR>
+vmap <leader>4 <ESC>:Telescope find_files<CR>
+
 imap <leader>st <ESC>:Telescope live_grep<CR>
 nmap <leader>st <ESC>:Telescope live_grep<CR>
 vmap <leader>st <ESC>:Telescope live_grep<CR>
+
+imap <leader>3 <ESC>:Telescope live_grep<CR>
+nmap <leader>3 <ESC>:Telescope live_grep<CR>
+vmap <leader>3 <ESC>:Telescope live_grep<CR>
 
