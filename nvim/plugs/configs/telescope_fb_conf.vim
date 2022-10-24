@@ -33,3 +33,7 @@ command! KExplorer :Telescope file_browser
 imap <C-A-e> <ESC>:Telescope file_browser<CR>
 nmap <C-A-e> <ESC>:Telescope file_browser<CR>
 vmap <C-A-e> <ESC>:Telescope file_browser<CR>
+
+imap <leader>fd <ESC>:Telescope file_browser<CR>
+nmap <leader>fd <ESC>:Telescope file_browser<CR>
+vmap <leader>fd <ESC>:Telescope file_browser<CR>
