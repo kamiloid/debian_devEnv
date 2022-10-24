@@ -38,13 +38,13 @@ nmap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
 vmap <C-q> <ESC>:lua Kclose_all_buffers()<CR>
 "--CLOSE BUFFERS UNTIL EXPLORER//////////////////
 "--WHILE I GET THE HABIT TO USE C-W AS SUBLIME TEXT
-imap <A-q> <ESC>:lua Kclose_buffers()<CR>
-nmap <A-q> <ESC>:lua Kclose_buffers()<CR>
-vmap <A-q> <ESC>:lua Kclose_buffers()<CR>
+imap <leader>q <ESC>:lua Kclose_buffers()<CR>
+nmap <leader>q <ESC>:lua Kclose_buffers()<CR>
+vmap <leader>q <ESC>:lua Kclose_buffers()<CR>
 "--NEW TAB
-imap <A-t> <ESC>:tabnew<CR>
-nmap <A-t> <ESC>:tabnew<CR>
-vmap <A-t> <ESC>:tabnew<CR>
+imap <leader>t <ESC>:tabnew<CR>
+nmap <leader>t <ESC>:tabnew<CR>
+vmap <leader>t <ESC>:tabnew<CR>
 "--NEXT TAB
 imap <A-RIGHT> <ESC>:vsplit<CR>
 nmap <A-RIGHT> <ESC>:vsplit<CR>
@@ -54,9 +54,9 @@ imap <A-LEFT> <ESC>:split<CR>
 nmap <A-LEFT> <ESC>:split<CR>
 vmap <A-LEFT> <ESC>:split<CR>
 "--REMOVE PANEL
-imap <A-c> <ESC>:close<CR>
-nmap <A-c> <ESC>:close<CR>
-vmap <A-c> <ESC>:close<CR>
+imap <leader>c <ESC>:close<CR>
+nmap <leader>c <ESC>:close<CR>
+vmap <leader>c <ESC>:close<CR>
 "--RESIZE RIGHT PANEL VERTICALLY
 imap <leader><LEFT> <ESC>:vertical resize +5<CR>
 nmap <leader><LEFT> <ESC>:vertical resize +5<CR>
@@ -74,17 +74,17 @@ imap <leader><DOWN> <ESC>:resize -5<CR>
 nmap <leader><DOWN> <ESC>:resize -5<CR>
 vmap <leader><DOWN> <ESC>:resize -5<CR>
 "--TOGGLE DARK COLOR SCHEME
-imap <A-k> <ESC>:set background=dark<CR>
-nmap <A-k> <ESC>:set background=dark<CR>
-vmap <A-k> <ESC>:set background=dark<CR>
+imap <leader>k <ESC>:set background=dark<CR>
+nmap <leader>k <ESC>:set background=dark<CR>
+vmap <leader>k <ESC>:set background=dark<CR>
 "--TOGGLE LIGHT COLOR SCHEME
-imap <A-l> <ESC>:set background=light<CR>
-nmap <A-l> <ESC>:set background=light<CR>
-vmap <A-l> <ESC>:set background=light<CR>
-"--DIR FILES
-imap <A-f> <ESC>:Files<CR>
-nmap <A-f> <ESC>:Files<CR>
-vmap <A-f> <ESC>:Files<CR>
+imap <leader>l <ESC>:set background=light<CR>
+nmap <leader>l <ESC>:set background=light<CR>
+vmap <leader>l <ESC>:set background=light<CR>
+"--DIR FILES  
+imap <leader>f <ESC>:Files<CR>
+nmap <leader>f <ESC>:Files<CR>
+vmap <leader>f <ESC>:Files<CR>
 "--NVIMTREE_TOGGLE
 imap <C-b> <ESC>:NvimTreeToggle<CR>
 nmap <C-b> <ESC>:NvimTreeToggle<CR>
@@ -118,12 +118,12 @@ nmap <C-y> <ESC>:redo<CR>
 vmap <C-y> <ESC>:redo<CR>
 "--SELECT ALL LINES
 imap <C-A-a> <ESC>G$v0gg
-nmap <C-A-a> <ESC>G$v0gg
+nmap <C-A-a> <ESC>G$v1gg
 nmap <C-A-a> <ESC>G$v0gg
 "--COMMENTS
-imap <A-'> <ESC>:CommentToggle<CR>
-nmap <A-'> :CommentToggle<CR>
-vmap <A-'> :CommentToggle<CR>
+imap <leader>' <ESC>:CommentToggle<CR>
+nmap <leader>' :CommentToggle<CR>
+vmap <leader>' :CommentToggle<CR>
 "--FORMMAT INDENTATION
 imap <silent><leader>fm <ESC>:KFormat<CR>
 nmap <silent><leader>fm <ESC>:KFormat<CR>
