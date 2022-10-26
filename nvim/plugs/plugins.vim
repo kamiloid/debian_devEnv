@@ -66,6 +66,7 @@ call plug#end()
 
 "------- PLUGINS CONFIG -------------------------------
 "------------------------------------------------------
+source $HOME/.config/nvim/plugs/configs/lsp_config.vim
 source $HOME/.config/nvim/plugs/configs/treesitter_conf.vim
 source $HOME/.config/nvim/plugs/configs/schemes_conf.vim
 source $HOME/.config/nvim/plugs/configs/lualine_conf.vim

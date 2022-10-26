@@ -149,6 +149,13 @@ command! KProject :lua load_telescope_project()
 " command! KColorSchemes :lua require('plugs.configs.telescopeExtras.colorscheme_picker').run()
 command! KColorSchemes :luafile $HOME/.config/nvim/plugs/configs/telescopeExtras/colorscheme_picker.lua
 command! KTerminal :luafile $HOME/.config/nvim/plugs/configs/telescopeExtras/float_terminals.lua
+command! KLangServers :luafile $HOME/.config/nvim/plugs/configs/telescopeExtras/servlang_picker.lua
+
+command! KLspEnable :lua KLsp_enable()
+command! KCocEnable :lua KCoc_enable()
+command! KLspCocEnable :lua KLsp_Coc_enable()
+command! KLspCocDisable :lua KLsp_Coc_none()
+
 
 ""--KEY MAPS
 imap <leader>sp <ESC>:Telescope spell_suggest<CR>
@@ -186,4 +193,3 @@ vmap <leader>st <ESC>:Telescope live_grep<CR>
 imap <leader>3 <ESC>:Telescope live_grep<CR>
 nmap <leader>3 <ESC>:Telescope live_grep<CR>
 vmap <leader>3 <ESC>:Telescope live_grep<CR>
-

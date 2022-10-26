@@ -80,3 +80,5 @@ set background=dark
 
 hi Pmenu guibg=#2b2b2b guifg=#666666
 hi PmenuSel guibg=#455861 guifg=#74a9c2
+
+
