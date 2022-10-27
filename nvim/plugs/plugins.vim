@@ -4,7 +4,7 @@ call plug#begin()
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'on': 'CocEnable'}
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'rmagatti/goto-preview'

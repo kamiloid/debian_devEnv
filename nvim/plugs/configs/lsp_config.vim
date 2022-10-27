@@ -14,6 +14,7 @@ inoremap <silent><expr> <CR> compe#confirm({ 'keys': '<CR>', 'select': v:true })
 autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 " autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
+autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js,*.html Format
 
 let g:LanguageClient_serverCommands = {
     \ 'sql': ['sql-language-server', 'up', '--method', 'stdio'],

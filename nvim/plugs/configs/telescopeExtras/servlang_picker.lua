@@ -34,7 +34,8 @@ function KCoc_enable()
 	vim.cmd('CocEnable')
 	vim.cmd("KCompeDisable")
 	vim.cmd("source $HOME/.config/nvim/plugs/configs/coc_conf.vim")
-	vim.cmd("inoremap <silent><expr> <CR> coc#pum#confirm()")
+	-- vim.cmd("inoremap <silent><expr> <CR> coc#pum#confirm()")
+	-- vim.cmd('inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"')
 end
 
 function KLsp_Coc_enable()
