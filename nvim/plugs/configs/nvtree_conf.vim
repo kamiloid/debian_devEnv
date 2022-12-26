@@ -5,7 +5,7 @@ require("nvim-tree").setup({
 	sort_by = "case_sensitive",
 	view = {
 		adaptive_size = false,
-		height = 15,
+		--height = 15,
 		side = 'bottom',
 		centralize_selection = true,
 		number = false,
