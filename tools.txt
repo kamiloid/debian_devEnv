@@ -54,6 +54,9 @@ https://www.apachefriends.org/
 
 VIFM install reference:
 https://installati.one/debian/10/vifm/
+Edit the file "Default.vifm" in ~/.config/vifm/colors/ in line:81, where it says "highlight OtherWin":
+Put the next line:
+highlight OtherWin underline,reverse,standout,italic ctermfg=default
 
 NCDU install reference:
 https://installati.one/debian/11/ncdu/
