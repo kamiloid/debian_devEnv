@@ -3,7 +3,7 @@ sudo apt install xclip
 
 Install acpi
 sudo apt install acpi
-In bashrc type: alias batery="acpi -b"
+In bashrc type: alias battery="acpi -b"
 
 Install NeoVim correctly:
 Download nvim-linux64.deb from releases: https://github.com/neovim/neovim/releases/tag/v0.7.2
