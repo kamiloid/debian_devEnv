@@ -19,3 +19,9 @@ alias mysql_client="~/.local/bin/mycli -d conn"
 Initial commands
 cl
 miel s1
+
+Set these instructions to autocomplete immediately with Tab key:
+bind '"\t":menu-complete'
+bind "set show-all-if-ambiguous on"
+bind "set completion-ignore-case on"
+bind "set menu-complete-display-prefix on"
