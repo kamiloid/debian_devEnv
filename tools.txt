@@ -60,6 +60,7 @@ highlight OtherWin underline,reverse,standout,italic ctermfg=default
 
 NCDU install reference:
 https://installati.one/debian/11/ncdu/
+Type in bashrc or zshrc: alias disk="ncdu --color dark"
 
 MyCLI
 https://www.mycli.net/
