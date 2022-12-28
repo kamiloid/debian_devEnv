@@ -11,8 +11,8 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 inoremap <silent><expr> <CR> compe#confirm({ 'keys': '<CR>', 'select': v:true })
 
 " auto-format
-autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js lua vim.lsp.buf.formatting_sync(nil, 100)
-autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
+"autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js lua vim.lsp.buf.formatting_sync(nil, 100)
+"autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 " autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll
 autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js,*.html Format
 

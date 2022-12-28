@@ -5,6 +5,8 @@ local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 local themes = require('telescope.themes')
 
+local lang = 'LSP'
+
 local style = {
 	layout_strategy = "vertical",
 	layout_config = {
@@ -23,22 +25,27 @@ local table = {
 }
 
 function KLsp_enable()
-	vim.cmd('CocDisable')
+	if lang == 'COC' or lang == 'BOTH' then
+		vim.cmd('CocDisable')
+	end
+	lang = 'LSP'
 	vim.cmd('LspStart')
-	vim.cmd("KCompeEnable")
+	vim.cmd('KCompeEnable')
 	vim.cmd("inoremap <silent><expr> <CR> compe#confirm({ 'keys': '<CR>', 'select': v:true })")
 end
 
 function KCoc_enable()
-	vim.cmd('LspStop')
+	if lang == 'LSP' or lang == 'BOTH' then
+		vim.cmd('LspStop')
+		vim.cmd('KCompeDisable')
+	end
+	lang = 'COC'
 	vim.cmd('CocEnable')
-	vim.cmd("KCompeDisable")
 	vim.cmd("source $HOME/.config/nvim/plugs/configs/coc_conf.vim")
-	-- vim.cmd("inoremap <silent><expr> <CR> coc#pum#confirm()")
-	-- vim.cmd('inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"')
 end
 
 function KLsp_Coc_enable()
+	lang = 'BOTH'
 	vim.cmd('CocEnable')
 	vim.cmd('LspStart')
 	vim.cmd("KCompeEnable")
@@ -47,9 +54,14 @@ function KLsp_Coc_enable()
 end
 
 function KLsp_Coc_none()
-	vim.cmd('CocDisable')
-	vim.cmd('LspStop')
-	vim.cmd("KCompeDisable")
+	if lang == 'COC' then
+		vim.cmd('CocDisable')
+	end
+	if lang == 'LSP' then
+		vim.cmd('LspStop')
+		vim.cmd('KCompeDisable')
+	end
+	lang = 'NONE'
 	vim.cmd("inoremap <silent><expr> <CR>")
 end
 
