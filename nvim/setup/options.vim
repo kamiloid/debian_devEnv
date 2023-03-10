@@ -14,6 +14,7 @@ set title
 set ttimeoutlen=0
 set splitbelow splitright
 set t_Co=256
+set wrap!
 filetype plugin indent on
 syntax on
 

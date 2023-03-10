@@ -13,7 +13,7 @@ end
 
 function Kclose_all_buffers()
 	local count = Kbuffer_length()
-	vim.cmd("KShadeOff")
+	--vim.cmd("KShadeOff")
 	for b = 1, count do
 		--vim.cmd("BufferDelete!")
 		vim.cmd("BufferDelete")
@@ -27,10 +27,10 @@ function Kclose_buffers()
 	local name = vim.api.nvim_buf_get_name(current_buffer)
 	local count = Kbuffer_length()
 	if count > 1 then
-		--vim.cmd(":BufferDelete!")
-		vim.cmd("KShadeOff")
+		----vim.cmd(":BufferDelete!")
+		--vim.cmd("KShadeOff")
 		vim.cmd("BufferDelete")
-		vim.cmd("KShadeOn")
+		--vim.cmd("KShadeOn")
 		return
 	end
 	if name ~= '' then
