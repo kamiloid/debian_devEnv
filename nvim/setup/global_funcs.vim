@@ -13,10 +13,11 @@ end
 
 function Kclose_all_buffers()
 	local count = Kbuffer_length()
-	vim.cmd("KShadeOff")
+	--vim.cmd("KShadeOff")
 	for b = 1, count do
 		--vim.cmd("BufferDelete!")
-		vim.cmd("BufferDelete")
+		--vim.cmd("BufferDelete")
+		vim.cmd("bdelete")
 		vim.cmd("q!")
 	end
 	vim.cmd("q!")
@@ -28,14 +29,16 @@ function Kclose_buffers()
 	local count = Kbuffer_length()
 	if count > 1 then
 		--vim.cmd(":BufferDelete!")
-		vim.cmd("KShadeOff")
-		vim.cmd("BufferDelete")
-		vim.cmd("KShadeOn")
+		--vim.cmd("KShadeOff")
+		--vim.cmd("BufferDelete")
+		vim.cmd("bdelete")
+		--vim.cmd("KShadeOn")
 		return
 	end
 	if name ~= '' then
 		vim.api.nvim_buf_delete(0, { force })
-		vim.cmd(":NvimTreeOpen")
+		vim.cmd(":NERDTree")
+		--vim.cmd(":NvimTreeOpen")
 		--vim.cmd(":Startify")
 	end
 end

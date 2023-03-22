@@ -16,6 +16,10 @@ vmap <S-TAB> :<<CR>
 " nmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
 " vmap <leader><S-TAB> <ESC>:BufferPrevious<CR>
 
+imap <C-b> <ESC>:NERDTreeToggle<CR>
+nmap <C-b> <ESC>:NERDTreeToggle<CR>
+vmap <C-b> <ESC>:NERDTreeToggle<CR>
+
 imap <leader><TAB> <ESC>:bnext<CR>
 nmap <leader><TAB> <ESC>:bnext<CR>
 vmap <leader><TAB> <ESC>:bnext<CR>
@@ -135,7 +139,7 @@ nmap <leader>[ <ESC>:FloatermPrev<CR>
 vmap <leader>[ <ESC>:FloatermPrev<CR>
 "--ACTIVATE AUTOCOMPLETE SELECTION PRESSING ENTER IN COC
 "REF: https://superuser.com/questions/1734914/neovim-coc-nvim-enter-key-doesnt-work-to-autocomplete
-" inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 " inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : compe#confirm({ 'keys': '<CR>', 'select': v:true })
 
 

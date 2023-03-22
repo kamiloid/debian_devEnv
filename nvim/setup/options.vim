@@ -16,6 +16,7 @@ set splitbelow splitright
 set t_Co=256
 filetype plugin indent on
 syntax on
+set nowrap
 
 set encoding=UTF-8
 
@@ -81,4 +82,4 @@ set background=dark
 hi Pmenu guibg=#2b2b2b guifg=#666666
 hi PmenuSel guibg=#455861 guifg=#74a9c2
 
-
+:CocEnable
